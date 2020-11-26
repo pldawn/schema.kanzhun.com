@@ -1,0 +1,43 @@
+{
+	"@context": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"@vocab": {
+		"部门/事业群": {
+			"@align": "schema:department",
+			"@domain": "kzs:Company"
+		},
+		"曾用名": {
+			"@align": "kzs:usedName",
+			"@domain": "kzs:Company"
+		},
+		"网站名称": {
+			"@align": "schema:name",
+			"@domain": "schema:URL",
+			"@explanation": "www.kanzhun.com放在URL的identifier属性上，看准网放在URL的name属性上"
+		},
+		"商标": {
+			"@align": "kzs:trademark",
+			"@domain": "kzs:Company",
+			"@explanation": "商标指商标实体，由单一公司持有注册，注意商标（实体）和品牌（非实体）的区别"
+		},
+		"品牌": {
+			"@align": "schema:brand",
+			"@domain": "kzs:Company",
+			"@explanation": "品牌由某个公司持有注册，但在使用上通常对应一个公司组"
+		},
+		"产品": {
+			"@align": "kzs:offeredProduct",
+			"@domain": "kzs:Company",
+			"@explanation": "产品指产品实体，必须有实际的存在状态，包括网站、APP等"
+		},
+		"别称/外号": {
+			"@align": "kzs:aliasName",
+			"@domain": "kzs:Company",
+			"@explanation": "别称/外号与简称不同，是字面基本全部变更的名称，例如百度是简称，狼厂是别称"
+		},
+		"简称": {
+			"@align": "kzs:shortName",
+			"@domain": "kzs:Company",
+			"@explanation": "简称定义为字面基本全是从全称中来的名称，包括增加集团、公司这种泛指的字符"
+		}
+	}
+}

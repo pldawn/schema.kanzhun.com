@@ -1,0 +1,32 @@
+{
+  "@context": [
+    {
+			"Trademark": "kzs:Trademark",
+			"foundingCity": {
+				"@id": "kzs:foundingCity",
+				"@domain": "Company",
+				"@range": ["Text", "Place"]
+			},
+			"trademark": {
+				"@id": "kzs:trademark",
+				"@domain": "Company",
+				"@range": "Trademark"
+			},
+			"paidCapital": {
+				"@id": "kzs:paidCapital",
+				"@domain": "Company",
+				"@type": "Text"
+			},
+			"foreignName": {
+				"@id": "kzs:foreignName",
+				"@domain": "Company",
+				"@type": "Text"
+			},
+			"insuredCount": {
+				"@id": "kzs:insuredCount",
+				"@domain": "kzs:Company",
+				"@type": "Integer"
+			}
+    }
+  ]
+}

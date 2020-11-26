@@ -1,0 +1,92 @@
+[
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    "X-Classpath": "contexts/base.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/AddressLevelType.jsonld",
+    "X-Classpath": "contexts/AddressLevelType.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/DegreeType.jsonld",
+    "X-Classpath": "contexts/DegreeType.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/EducationRequirementsType.jsonld",
+    "X-Classpath": "contexts/EducationRequirementsType.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/ExperienceRequirementsType.jsonld",
+    "X-Classpath": "contexts/ExperienceRequirementsType.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/ladanta/Company.jsonld",
+    "X-Classpath": "contexts/Company.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/ladanta/CompanyType.jsonld",
+    "X-Classpath": "contexts/CompanyType.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/Organization.jsonld",
+    "X-Classpath": "contexts/Organization.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/User.jsonld",
+    "X-Classpath": "contexts/User.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/AdministrativeArea.jsonld",
+    "X-Classpath": "contexts/AdministrativeArea.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/EducationalOrganization.jsonld",
+    "X-Classpath": "contexts/EducationalOrganization.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/JobPosting.jsonld",
+    "X-Classpath": "contexts/JobPosting.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/FreezingEvent.jsonld",
+    "X-Classpath": "contexts/FreezingEvent.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/ServiceMembership.jsonld",
+    "X-Classpath": "contexts/ServiceMembership.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/NotUser.jsonld",
+    "X-Classpath": "contexts/NotUser.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/CommunicationInfo.jsonld",
+    "X-Classpath": "contexts/CommunicationInfo.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/20190112/AppActiveEvent.jsonld",
+    "X-Classpath": "contexts/AppActiveEvent.jsonld",
+    "Content-Type": "application/ld+json"
+  },
+  {
+    "Content-Location": "https://schema.kanzhun.com/contexts/ladanta/CompanyExtensionFromQichacha.jsonld",
+    "X-Classpath": "contexts/CompanyExtensionFromQichacha.jsonld",
+    "Content-Type": "application/ld+json"
+  }
+]

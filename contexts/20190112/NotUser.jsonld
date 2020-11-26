@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    {
+      "Person": "schema:Person",
+      "name": {
+        "@id": "schema:name",
+		"@domain": "Person",
+        "@type": "Text"
+      },
+      "description": {
+        "@id": "schema:description",
+		"@domain": "Person",
+        "@type": "Text"
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/NotUser.jsonld",
+      "@comment": "create a Person who is not a User.",
+      "@id": "kzidv:NotUser#1",
+      "@type": "Person",
+      "name": "李冰",
+      "description": "140602xxxx1710"
+    }
+  ]
+}

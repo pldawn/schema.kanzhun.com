@@ -1,0 +1,27 @@
+{
+  "@context": [
+    {
+      "AuditStatusTypeFromKanzhun": "kzs:AuditStatusTypeFromKanzhun",
+      "InitFromKanzhun": "kzs:InitFromKanzhun",
+      "SuccFromKanzhun": "kzs:SuccFromKanzhun",
+      "FailFromKanzhun": "kzs:FailFromKanzhun",
+      "ChuanXiaoFromKanzhun": "kzs:ChuanXiaoFromKanzhun",
+      "ZhaPianOrBuLiangFromKanzhun": "kzs:ZhaPianOrBuLiangFromKanzhun",
+      "DiaoXiaoOrZhuXiaoFromKanzhun": "kzs:DiaoXiaoOrZhuXiaoFromKanzhun",
+      "WangJingFromKanzhun": "kzs:WangJingFromKanzhun",
+      "BlackListFromKanzhun": "kzs:BlackListFromKanzhun",
+      "QiYeShanSuFromKanzhun": "kzs:QiYeShanSuFromKanzhun",
+      "FaBuZheYaoQiuFromKanzhun": "kzs:FaBuZheYaoQiuFromKanzhun",
+      "auditStatus": {
+        "@id": "kzs:auditStatus",
+        "@domain": "Company",
+        "@range": ["Text", "AuditStatusTypeFromKanzhun"]
+      },
+      "updateTime": {
+        "@id": "kzs:updateTime",
+        "@domain": "Company",
+        "@range": ["DateTime", "Date"]
+      }
+    }
+  ]
+}

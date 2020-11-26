@@ -1,0 +1,124 @@
+schema仓库，存储自定义的新Class和新Property。
+基础上下文20190112/base.jsonld文档定义schema仓库根目录的命名空间为"kzs:https://schema.kanzhun.com/schema/"。
+
+schema.org的schema文档下载地址 : https://schema.kanzhun.com/schema/all-layers.jsonld
+新增的schema文档下载地址       : https://schema.kanzhun.com/schema/kanzhun.jsonld
+
+AddressLevelType           : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/AddressLevelType
+Area                       : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Area
+BachelorAbove              : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/BachelorAbove
+BachelorBelow              : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/BachelorBelow
+BachelorDiploma            : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/BachelorDiploma
+Boss                       : 继承: kzs:ServiceMembershipType,      URI: https://schema.kanzhun.com/schema/Boss
+BSSIDSpecification         : 继承: schema:StructuredValue,         URI: https://schema.kanzhun.com/schema/BSSIDSpecification
+City                       : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/City
+CollegeAbove               : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/CollegeAbove
+CollegeBelow               : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/CollegeBelow
+CollegeDiploma             : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/CollegeDiploma
+CommunicationService       : 继承: schema:Service,                 URI: https://schema.kanzhun.com/schema/CommunicationService
+Country                    : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Country
+DegreeType                 : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/DegreeType
+District                   : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/District
+DoctorAbove                : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/DoctorAbove
+DoctorBelow                : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/DoctorBelow
+DoctorDiploma              : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/DoctorDiploma
+EducationRequirementsType  : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/EducationRequirementsType
+EmailAccount               : 继承: kzs:CommunicationService,       URI: https://schema.kanzhun.com/schema/EmailAccount
+ExperienceRequirementsType : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/ExperienceRequirementsType
+FiveToTenYear              : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/FiveToTenYear
+FiveYearLess               : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/FiveYearLess
+FiveYearMore               : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/FiveYearMore
+Floor                      : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Floor
+Freeze                     : 继承: schema:FreezingEventType,       URI: https://schema.kanzhun.com/schema/Freeze
+FreezingEvent              : 继承: schema:Event,                   URI: https://schema.kanzhun.com/schema/FreezingEvent
+FreezingEventType          : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/FreezingEventType
+Geek                       : 继承: kzs:ServiceMembershipType,      URI: https://schema.kanzhun.com/schema/Geek
+Graduate                   : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/Graduate
+HighSchoolAbove            : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/HighSchoolAbove
+HighSchoolBelow            : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/HighSchoolBelow
+HighSchoolDiploma          : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/HighSchoolDiploma
+Hunter                     : 继承: kzs:ServiceMembershipType,      URI: https://schema.kanzhun.com/schema/Hunter
+IPAddress                  : 继承: kzs:CommunicationService,       URI: https://schema.kanzhun.com/schema/IPAddress
+Landmark                   : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Landmark
+LoginRole                  : 继承: schema:Role,                    URI: https://schema.kanzhun.com/schema/LoginRole
+MasterAbove                : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/MasterAbove
+MasterBelow                : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/MasterBelow
+MasterDiploma              : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/MasterDiploma
+MiddleSchoolAbove          : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/MiddleSchoolAbove
+MiddleSchoolBelow          : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/MiddleSchoolBelow
+MiddleSchoolDiploma        : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/MiddleSchoolDiploma
+OneToThreeYear             : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/OneToThreeYear
+OneYearLess                : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/OneYearLess
+OneYearMore                : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/OneYearMore
+PhoneNumber                : 继承: kzs:CommunicationService,       URI: https://schema.kanzhun.com/schema/PhoneNumber
+PhoneSpecification         : 继承: schema:StructuredValue,         URI: https://schema.kanzhun.com/schema/PhoneSpecification
+PostdoctoralAbove          : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/PostdoctoralAbove
+PostdoctoralBelow          : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/PostdoctoralBelow
+PostdoctoralDiploma        : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/PostdoctoralDiploma
+PrimarySchoolAbove         : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/PrimarySchoolAbove
+PrimarySchoolBelow         : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/PrimarySchoolBelow
+PrimarySchoolDiploma       : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/PrimarySchoolDiploma
+Province                   : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Province
+SecondaryCollegeAbove      : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/SecondaryCollegeAbove
+SecondaryCollegeBelow      : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/SecondaryCollegeBelow
+SecondaryCollegeDiploma    : 继承: kzs:DegreeType,                 URI: https://schema.kanzhun.com/schema/SecondaryCollegeDiploma
+ServiceMembership          : 继承: schema:Intangible,              URI: https://schema.kanzhun.com/schema/ServiceMembership
+ServiceMembershipType      : 继承: schema:Enumeration,             URI: https://schema.kanzhun.com/schema/ServiceMembershipType
+SSIDSpecification          : 继承: schema:StructuredValue,         URI: https://schema.kanzhun.com/schema/SSIDSpecification
+Storey                     : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Storey
+Street                     : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Street
+Tablet                     : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Tablet
+TenYearLess                : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/TenYearLess
+TenYearMore                : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/TenYearMore
+ThreeToFiveYear            : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/ThreeToFiveYear
+ThreeYearLess              : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/ThreeYearLess
+ThreeYearMore              : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/ThreeYearMore
+Tower                      : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Tower
+Township                   : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Township
+Unfreeze                   : 继承: schema:FreezingEventType,       URI: https://schema.kanzhun.com/schema/Unfreeze
+Unit                       : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Unit
+UnlimitedDegree            : 继承: kzs:EducationRequirementsType,  URI: https://schema.kanzhun.com/schema/UnlimitedDegree
+UnlimitedExperience        : 继承: kzs:ExperienceRequirementsType, URI: https://schema.kanzhun.com/schema/UnlimitedExperience
+User                       : 继承: schema:Person,                  URI: https://schema.kanzhun.com/schema/User
+Village                    : 继承: kzs:AddressLevelType,           URI: https://schema.kanzhun.com/schema/Village
+WechatAccount              : 继承: kzs:CommunicationService,       URI: https://schema.kanzhun.com/schema/WechatAccount
+
+addressLevel         : 继承: schema:description, URI: https://schema.kanzhun.com/schema/addressLevel 
+broadcast            : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/broadcast
+bssidGeo             : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/bssidGeo
+capSalary            : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/capSalary
+certification        : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/certification
+coordinates          : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/coordinates
+dateTimePosted       : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/dateTimePosted
+degree               : 继承: schema:description, URI: https://schema.kanzhun.com/schema/degree
+deviceid             : 继承: schema:identifier,  URI: https://schema.kanzhun.com/schema/deviceid
+domesticRating       : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/domesticRating
+eventType            : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/eventType
+freezingStatus       : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/freezingStatus
+hasBSSIDSpecification: 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasBSSIDSpecification
+hasEmailAccount      : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasEmailAccount
+hasIPAddress         : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasIPAddress
+hasPhoneNumber       : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasPhoneNumber
+hasPhoneSpecification: 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasPhoneSpecification
+hasSSIDSpecification : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasSSIDSpecification
+hasWechatAccount     : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hasWechatAccount
+hiringPerson         : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/hiringPerson
+idfa                 : 继承: schema:identifier,  URI: https://schema.kanzhun.com/schema/idfa
+inDepartment         : 继承: schema:description, URI: https://schema.kanzhun.com/schema/inDepartment
+loginTimes           : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/loginTimes
+major                : 继承: schema:description, URI: https://schema.kanzhun.com/schema/major
+organizationIndustry : 继承: schema:description, URI: https://schema.kanzhun.com/schema/organizationIndustry
+originalName         : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/originalName
+register             : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/register
+registerTime         : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/registerTime
+serviceType          : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/serviceType
+standardEducationRequirements  : 继承: schema:Property, URI: https://schema.kanzhun.com/schema/standardEducationRequirements
+standardExperienceRequirements : 继承: schema:Property, URI: https://schema.kanzhun.com/schema/standardExperienceRequirements
+stockholder          : 继承: schema:sponsor,     URI: https://schema.kanzhun.com/schema/stockholder
+stockPercent         : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/stockPercent
+streetNumber         : 继承: schema:description, URI: https://schema.kanzhun.com/schema/streetNumber
+suffix               : 继承: schema:description, URI: https://schema.kanzhun.com/schema/suffix
+userGeo              : 继承: schema:Property,    URI: https://schema.kanzhun.com/schema/userGeo
+xid                  : 继承: schema:identifier,  URI: https://schema.kanzhun.com/schema/xid
+
+新的Class和Property的细节，在各自的URI内展示，具体展示细节待定，每个页面至少包含：定义、继承父类、继承得来的属性、新的属性、值域和定义域、子类。

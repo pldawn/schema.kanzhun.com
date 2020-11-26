@@ -1,0 +1,17 @@
+{
+  "@context": {
+	"UnlimitedExperience": "https://schema.kanzhun.com/schema/UnlimitedExperience",
+	"Graduate": "https://schema.kanzhun.com/schema/Graduate",
+	"OneYearMore": "https://schema.kanzhun.com/schema/OneYearMore",
+	"OneYearLess": "https://schema.kanzhun.com/schema/OneYearLess",
+	"OneToThreeYear": "https://schema.kanzhun.com/schema/OneToThreeYear",
+	"ThreeYearMore": "https://schema.kanzhun.com/schema/ThreeYearMore",
+	"ThreeYearLess": "https://schema.kanzhun.com/schema/ThreeYearLess",
+	"ThreeToFiveYear": "https://schema.kanzhun.com/schema/ThreeToFiveYear",
+	"FiveYearMore": "https://schema.kanzhun.com/schema/FiveYearMore",
+	"FiveYearLess": "https://schema.kanzhun.com/schema/FiveYearLess",
+	"FiveToTenYear": "https://schema.kanzhun.com/schema/FiveToTenYear",
+	"TenYearMore": "https://schema.kanzhun.com/schema/TenYearMore",
+	"TenYearLess": "https://schema.kanzhun.com/schema/TenYearLess"
+  }
+}

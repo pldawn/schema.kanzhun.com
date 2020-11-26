@@ -1,0 +1,27 @@
+{
+  "@context": 
+    {
+	  "DuZiQiYe": "kzs:DuZiQiYe",
+	  "PuTongHeHuoQiYe": "kzs:PuTongHeHuoQiYe",
+	  "YouXianHeHuoQiYe": "kzs:YouXianHeHuoQiYe",
+	  "GuFenYouXianGongSi": "kzs:GuFenYouXianGongSi",
+	  "YouXianZeRenGongSi": "kzs:YouXianZeRenGongSi",
+	  "GuoYouJingJi": "kzs:GuoYouJingJi",
+	  "JiTiJingJi": "kzs:JiTiJingJi",
+	  "SiYingJingJi": "kzs:SiYingJingJi",
+	  "GeTiJingJi": "kzs:GeTiJingJi",
+	  "LianYingJingJi": "kzs:LianYingJingJi",
+	  "GuFenZhi": "kzs:GuFenZhi",
+	  "WaiShangTouZi": "kzs:WaiShangTouZi",
+	  "GangAoTaiTouZi": "kzs:GangAoTaiTouZi",
+	  "QiTaJingJi": "kzs:QiTaJingJi",
+	  "CunXu": "kzs:CunXu",
+	  "ZaiYe": "kzs:ZaiYe",
+	  "DiaoXiao": "kzs:DiaoXiao",
+	  "ZhuXiao": "kzs:ZhuXiao",
+	  "QianRu": "kzs:QianRu",
+	  "QianChu": "kzs:QianChu",
+	  "TingYe": "kzs:TingYe",
+	  "QingSuan": "kzs:QingSuan"
+	}
+}

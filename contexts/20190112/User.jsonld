@@ -1,0 +1,210 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"https://schema.kanzhun.com/contexts/20190112/DegreeType.jsonld",
+    {
+      "User": "kzs:User",
+	  "ServiceMembership": "kzs:ServiceMembership",
+	  "ServiceMembershipType": "kzs:ServiceMembershipType",
+      "Boss": "kzs:Boss",
+      "Geek": "kzs:Geek",
+	  "Hunter": "kzs:Hunter",
+      "FreezingEvent": "kzs:FreezingEvent",
+      "EducationalOrganization": "schema:EducationalOrganization",
+      "Organization": "schema:Organization",
+      "OrganizationRole": "schema:OrganizationRole",
+	  "DegreeType": "kzs:DegreeType",
+	  "FreezingEventType": "kzs:FreezingEventType",
+	  "Freeze": "kzs:Freeze",
+	  "Unfreeze": "kzs:Unfreeze",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": ["User", "Organization", "EducationalOrganization"],
+        "@type": "Integer"
+      },
+      "name": {
+        "@id": "schema:name",
+		"@domain": ["User", "ServiceMembership"],
+        "@type": "Text"
+      },
+	  "reason": {
+        "@id": "schema:name",
+		"@domain": "FreezingEvent",
+        "@type": "Text"
+      },
+      "legalName": {
+        "@id": "schema:legalName",
+		"@domain": ["Organization", "EducationalOrganization"],
+        "@type": "Text"
+      },
+      "register": {
+        "@id": "kzs:register",
+		"@domain": "User",
+        "@range": "ServiceMembership"
+      },
+      "serviceType": {
+        "@id": "kzs:serviceType",
+		"@domain": "ServiceMembership",
+        "@range": "ServiceMembershipType",
+		"@enumeration": ["Boss", "Geek", "Hunter"]
+      },
+      "certification": {
+        "@id": "kzs:certification",
+		"@domain": "ServiceMembership",
+        "@type": "Integer"
+      },
+	  "registerTime": {
+        "@id": "kzs:registerTime",
+		"@domain": ["ServiceMembership", "Organization"],
+        "@type": "DateTime"
+      },
+      "domesticRating": {
+        "@id": "kzs:domesticRating",
+		"@domain": "EducationalOrganization",
+        "@type": "Integer"
+      },
+      "startDate": {
+        "@id": "schema:startDate",
+		"@domain": "OrganizationRole",
+        "@type": "DateTime"
+      },
+      "endDate": {
+        "@id": "schema:endDate",
+		"@domain": "OrganizationRole",
+        "@type": "DateTime"
+      },
+      "degree": {
+        "@id": "kzs:degree",
+		"@domain": "OrganizationRole",
+        "@range": "DegreeType",
+		"@enumeration": ["PrimarySchoolDiploma", "MiddleSchoolDiploma", "SecondaryCollegeDiploma", "HighSchoolDiploma", "CollegeDiploma", "BachelorDiploma", "MasterDiploma", "DoctorDiploma", "PostdoctoralDiploma"]
+      },
+      "major": {
+        "@id": "kzs:major",
+		"@domain": "OrganizationRole",
+        "@type": "Text"
+      },
+      "inDepartment": {
+        "@id": "kzs:inDepartment",
+		"@domain": "OrganizationRole",
+        "@type": "Text"
+      },
+      "frozenBy": {
+        "@reverse": "schema:attendee",
+		"@domain": "User",
+        "@range": "FreezingEvent"
+      },
+      "alumniOf": {
+        "@id": "schema:alumniOf",
+		"@domain": ["User", "OrganizationRole"],
+        "@range": "EducationalOrganization"
+      },
+      "worksFor": {
+        "@id": "schema:worksFor",
+		"@domain": ["User", "OrganizationRole"],
+        "@range": "Organization"
+      },
+	  "eventType": {
+        "@id": "kzs:eventType",
+		"@domain": "FreezingEvent",
+        "@range": "FreezingEventType",
+		"@enumeration": ["Freeze", "Unfreeze"]
+      },
+	  "freezingStatus": {
+        "@id": "kzs:freezingStatus",
+		"@domain": "User",
+        "@type": "Text"
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/User.jsonld",
+      "@comment": "create a User with a ServiceMembership.",
+      "@id": "kzidv:User#1",
+      "@type": "User",
+      "xid": "32087823",
+	  "freezingStatus": "0-0",
+	  "register": [
+	    {
+		  "@id": "kzidv:ServiceMembership#1",
+		  "@type": "ServiceMembership",
+		  "serviceType": "Boss",
+		  "name": "张文涛",
+		  "registerTime": "2017-10-26T11:02:30",
+		  "certification": "3"
+		},
+		{
+		  "@id": "kzidv:ServiceMembership#2",
+		  "@type": "ServiceMembership",
+		  "serviceType": "Geek",
+		  "name": "张文涛",
+		  "registerTime": "2017-10-26T11:02:30"
+		},
+		{
+		  "@id": "kzidv:ServiceMembership#3",
+		  "@type": "ServiceMembership",
+		  "serviceType": "Hunter",
+		  "name": "张文涛",
+		  "registerTime": "2017-10-26T11:02:30"
+		}
+	  ],
+      "frozenBy": {
+        "@id": "kzidv:FreezingEvent#1",
+        "@type": "FreezingEvent",
+        "reason": "130007",
+        "startDate": "2018-11-21T09:50:20",
+        "eventType": "Unfreeze"
+      },
+      "worksFor": [
+        {
+          "@type": "OrganizationRole",
+          "worksFor": {
+            "@id": "kzidv:Organization#1",
+            "@type": "Organization"
+          },
+          "inDepartment": "A部门",
+          "startDate": "2017-11-20"
+        },
+        {
+          "@type": "OrganizationRole",
+          "worksFor": {
+            "@id": "kzidv:Organization#2",
+            "@type": "Organization"
+          },
+          "inDepartment": "B部门",
+          "startDate": "2014-03-22",
+          "endDate": "2016-11-20"
+        }
+      ],
+      "alumniOf": {
+        "@type": "OrganizationRole",
+        "alumniOf": {
+          "@id": "kzidv:EducationalOrganization#1",
+          "@type": "EducationalOrganization",
+          "xid": "10002",
+          "legalName": "中国人民大学",
+          "domesticRating": "6"
+        },
+        "degree": "MasterDiploma",
+        "major": "金融学",
+        "startDate": "2013-09-01",
+        "endDate": "2016-06-20"
+      }
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/User.jsonld",
+      "@comment": "update a Boss when he or she is employed by other companies.",
+      "@id": "kzidv:User#1",
+      "@type": ["User", "Boss"],
+      "worksFor": {
+        "@type": "OrganizationRole",
+        "worksFor": {
+          "@id": "kzidv:Organization#1",
+          "@type": "Organization"
+        },
+        "endDate": "2020-03-22"
+      }
+    }
+  ]
+}

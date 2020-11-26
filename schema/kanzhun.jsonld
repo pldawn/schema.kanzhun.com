@@ -1,0 +1,1147 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "kzs": "https://schema.kanzhun.com/schema/"
+  },
+  "@graph": [
+    {
+      "@id": "kzs:kanzhun.jsonld",
+      "@graph": [
+        {
+          "@id": "kzs:User",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A user of BOSS app.",
+          "rdfs:label": "User",
+          "rdfs:subClassOf": {
+            "@id": "schema:Person"
+          }
+        },
+        {
+          "@id": "kzs:ServiceMembership",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "ServiceMembership in a Service.",
+          "rdfs:label": "ServiceMembership",
+          "rdfs:subClassOf": {
+            "@id": "schema:Intangible"
+          }
+        },
+        {
+          "@id": "kzs:ServiceMembershipType",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Class Enumeration of ServiceMembership in a Service: Boss, Geek, Hunter.",
+          "rdfs:label": "ServiceMembershipType",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+		    {
+          "@id": "kzs:Boss",
+          "@type": "kzs:ServiceMembershipType",
+          "rdfs:comment": "One Class of ServiceMembership in a Service.",
+          "rdfs:label": "Boss"
+        },
+	    	{
+          "@id": "kzs:Geek",
+          "@type": "kzs:ServiceMembershipType",
+          "rdfs:comment": "One Class of ServiceMembership in a Service.",
+          "rdfs:label": "Geek"
+        },
+	    	{
+          "@id": "kzs:Hunter",
+          "@type": "kzs:ServiceMembershipType",
+          "rdfs:comment": "One Class of ServiceMembership in a Service.",
+          "rdfs:label": "Hunter"
+        },
+        {
+          "@id": "kzs:FreezingEvent",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Event type: Freezeing event.",
+          "rdfs:label": "FreezingEvent",
+          "rdfs:subClassOf": {
+            "@id": "schema:Event"
+          }
+        },
+		    {
+          "@id": "kzs:DegreeType",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Type of Degree.",
+          "rdfs:label": "DegreeType",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+	    	{
+          "@id": "kzs:PrimarySchoolDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "PrimarySchoolDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:MiddleSchoolDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "MiddleSchoolDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:SecondaryCollegeDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "SecondaryCollegeDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:HighSchoolDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "HighSchoolDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:CollegeDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "CollegeDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:BachelorDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "BachelorDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+		    {
+          "@id": "kzs:MasterDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "MasterDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:DoctorDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "DoctorDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:PostdoctoralDiploma",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A type of degree.",
+          "rdfs:label": "PostdoctoralDiploma",
+          "rdfs:subClassOf": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+	    	{
+          "@id": "kzs:EducationRequirementsType",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Type of Education Requirements for a JobPosting.",
+          "rdfs:label": "EducationRequirementsType",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+	    	{
+          "@id": "kzs:UnlimitedDegree",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "UnlimitedDegree"
+        },
+	    	{
+          "@id": "kzs:PrimarySchoolAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "PrimarySchoolAbove"
+        },
+		    {
+          "@id": "kzs:PrimarySchoolBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "PrimarySchoolBelow"
+        },
+	    	{
+          "@id": "kzs:MiddleSchoolAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "MiddleSchoolAbove"
+        },
+		    {
+          "@id": "kzs:MiddleSchoolBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "MiddleSchoolBelow"
+        },
+	    	{
+          "@id": "kzs:SecondaryCollegeAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "SecondaryCollegeAbove"
+        },
+	    	{
+          "@id": "kzs:SecondaryCollegeBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "SecondaryCollegeBelow"
+        },
+	    	{
+          "@id": "kzs:HighSchoolAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "HighSchoolAbove"
+        },
+	    	{
+          "@id": "kzs:HighSchoolBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "HighSchoolBelow"
+        },
+	    	{
+          "@id": "kzs:CollegeAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "CollegeAbove"
+        },
+		    {
+          "@id": "kzs:CollegeBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "CollegeBelow"
+        },
+	    	{
+          "@id": "kzs:BachelorAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "BachelorAbove"
+        },
+	    	{
+          "@id": "kzs:BachelorBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "BachelorBelow"
+        },
+	    	{
+          "@id": "kzs:MasterAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "MasterAbove"
+        },
+	    	{
+          "@id": "kzs:MasterBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "MasterBelow"
+        },
+		    {
+          "@id": "kzs:DoctorAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "DoctorAbove"
+        },
+	    	{
+          "@id": "kzs:DoctorBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "DoctorBelow"
+        },
+	    	{
+          "@id": "kzs:PostdoctoralAbove",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "PostdoctoralAbove"
+        },
+	    	{
+          "@id": "kzs:PostdoctoralBelow",
+          "@type": "kzs:EducationRequirementsType",
+          "rdfs:comment": "One Type of Education Requirements in a Service.",
+          "rdfs:label": "PostdoctoralBelow"
+        },
+	    	{
+          "@id": "kzs:ExperienceRequirementsType",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Type of Experience Requirements for a JobPosting.",
+          "rdfs:label": "ExperienceRequirementsType",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+		    {
+          "@id": "kzs:UnlimitedExperience",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "UnlimitedExperience"
+        },
+	    	{
+          "@id": "kzs:Graduate",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "Graduate"
+        },
+	    	{
+          "@id": "kzs:OneYearMore",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "OneYearMore"
+        },
+	    	{
+          "@id": "kzs:OneYearLess",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "OneYearLess"
+        },
+	    	{
+          "@id": "kzs:OneToThreeYear",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "OneToThreeYear"
+        },
+	    	{
+          "@id": "kzs:ThreeYearMore",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "ThreeYearMore"
+        },
+	    	{
+          "@id": "kzs:ThreeYearLess",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "ThreeYearLess"
+        },
+	    	{
+          "@id": "kzs:ThreeToFiveYear",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "ThreeToFiveYear"
+        },
+	    	{
+          "@id": "kzs:FiveYearMore",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "FiveYearMore"
+        },
+		    {
+          "@id": "kzs:FiveYearLess",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "FiveYearLess"
+        },
+	    	{
+          "@id": "kzs:FiveToTenYear",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "FiveToTenYear"
+        },
+	    	{
+          "@id": "kzs:TenYearMore",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "TenYearMore"
+        },
+	    	{
+          "@id": "kzs:TenYearLess",
+          "@type": "kzs:ExperienceRequirementsType",
+          "rdfs:comment": "One Type of Experience Requirements in a Service.",
+          "rdfs:label": "TenYearLess"
+        },
+	    	{
+          "@id": "kzs:AddressLevelType",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Type of address level.",
+          "rdfs:label": "AddressLevelType",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+	    	{
+          "@id": "kzs:Country",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Country"
+        },
+	    	{
+          "@id": "kzs:Province",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Province"
+        },
+	    	{
+          "@id": "kzs:City",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "City"
+        },
+	    	{
+          "@id": "kzs:District",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "District"
+        },
+    		{
+          "@id": "kzs:Township",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Township"
+        },
+	    	{
+          "@id": "kzs:Village",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Village"
+        },
+	    	{
+          "@id": "kzs:Street",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Street"
+        },
+	    	{
+          "@id": "kzs:Landmark",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Landmark"
+        },
+	    	{
+          "@id": "kzs:Area",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Area"
+        },
+	    	{
+          "@id": "kzs:Tower",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Tower"
+        },
+		    {
+          "@id": "kzs:Storey",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Storey"
+        },
+	    	{
+          "@id": "kzs:Unit",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Unit"
+        },
+	    	{
+          "@id": "kzs:Floor",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Floor"
+        },
+	      {
+          "@id": "kzs:Tablet",
+          "@type": "kzs:AddressLevelType",
+          "rdfs:comment": "One Type of address level.",
+          "rdfs:label": "Tablet"
+        },
+	    	{
+          "@id": "kzs:CommunicationService",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A communication service provided by a communication service operator.",
+          "rdfs:label": "CommunicationService",
+          "rdfs:subClassOf": {
+            "@id": "schema:Service"
+          }
+        },
+	    	{
+          "@id": "kzs:WechatAccount",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A wechat account provided by Tencent.",
+          "rdfs:label": "WechatAccount",
+          "rdfs:subClassOf": {
+            "@id": "kzs:CommunicationService"
+          }
+        },
+	    	{
+          "@id": "kzs:EmailAccount",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A email account provided by mail service provider.",
+          "rdfs:label": "EmailAccount",
+          "rdfs:subClassOf": {
+            "@id": "kzs:CommunicationService"
+          }
+        },
+		    {
+          "@id": "kzs:PhoneNumber",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A phone number provided by telephone service provider.",
+          "rdfs:label": "PhoneNumber",
+          "rdfs:subClassOf": {
+            "@id": "kzs:CommunicationService"
+          }
+        },
+		    {
+          "@id": "kzs:IPAddress",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A ip provided by internet service provider.",
+          "rdfs:label": "IPAddress",
+          "rdfs:subClassOf": {
+            "@id": "kzs:CommunicationService"
+          }
+        },
+	    	{
+          "@id": "kzs:PhoneSpecification",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A structured value representing a phone.",
+          "rdfs:label": "PhoneSpecification",
+          "rdfs:subClassOf": {
+            "@id": "schema:StructuredValue"
+          }
+        },
+	    	{
+          "@id": "kzs:SSIDSpecification",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A structured value representing a wifi broadcasted by a router.",
+          "rdfs:label": "SSIDSpecification",
+          "rdfs:subClassOf": {
+            "@id": "schema:StructuredValue"
+          }
+        },
+	    	{
+          "@id": "kzs:BSSIDSpecification",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A structured value representing mac of a router.",
+          "rdfs:label": "BSSIDSpecification",
+          "rdfs:subClassOf": {
+            "@id": "schema:StructuredValue"
+          }
+        },
+		    {
+          "@id": "kzs:Coordinates",
+          "@type": [
+		    "rdfs:Class",
+			"schema:DataType"
+		  ],
+          "rdfs:comment": "Coordinates: [longitude, latitude].",
+          "rdfs:label": "Coordinates"
+        },
+		    {
+          "@id": "kzs:LoginRole",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "A subclass of Role used to describe roles within login event.",
+          "rdfs:label": "LoginRole",
+          "rdfs:subClassOf": {
+            "@id": "schema:Role"
+          }
+        },
+        {
+          "@id": "kzs:xid",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The identifier of a Thing which is set by kanzhun.com.",
+          "rdfs:label": "xid",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:identifier"
+          },
+          "schema:domainIncludes": [
+            {
+              "@id": "kzs:Company"
+            },
+            {
+              "@id": "kzs:User"
+            },
+            {
+              "@id": "schema:JobPosting"
+            }
+          ],
+          "schema:rangeIncludes": {
+            "@id": "schema:Integer"
+          }
+        },
+        {
+          "@id": "kzs:certification",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Certification status of a ServiceMembership.",
+          "rdfs:label": "certification",
+          "schema:domainIncludes": {
+            "@id": "kzs:ServiceMembership"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Integer"
+          }
+        },
+	    	{
+          "@id": "kzs:serviceType",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Type of a ServiceMembership.",
+          "rdfs:label": "serviceType",
+          "schema:domainIncludes": {
+            "@id": "kzs:ServiceMembership"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:ServiceMembershipType"
+          }
+        },
+		    {
+          "@id": "kzs:register",
+          "@type": "rdf:Property",
+          "rdfs:comment": "ServiceMembership of a User.",
+          "rdfs:label": "register",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:ServiceMembership"
+          }
+        },
+        {
+          "@id": "kzs:registerTime",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Register time of a Person or a Organization.",
+          "rdfs:label": "registerTime",
+          "schema:domainIncludes": [
+            {
+              "@id": "kzs:ServiceMembership"
+            },
+            {
+              "@id": "kzs:Company"
+            },
+            {
+              "@id": "kzs:CommunicationService"
+            }
+          ],
+          "schema:rangeIncludes": {
+            "@id": "schema:DateTime"
+          }
+        },
+        {
+          "@id": "kzs:hiringPerson",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Person offering the job position.",
+          "rdfs:label": "hiringPerson",
+          "schema:domainIncludes": {
+            "@id": "schema:JobPosting"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:User"
+          }
+        },
+        {
+          "@id": "kzs:domesticRating",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The domestic rating of the item.",
+          "rdfs:label": "domesticRating",
+          "schema:domainIncludes": {
+            "@id": "schema:EducationalOrganization"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Integer"
+          }
+        },
+        {
+          "@id": "kzs:degree",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The degree which a User gets.",
+          "rdfs:label": "degree",
+          "schema:domainIncludes":{
+            "@id": "schema:OrganizationRole"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:DegreeType"
+          }
+        },
+        {
+          "@id": "kzs:major",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The major in which a User studies.",
+          "rdfs:label": "major",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:description"
+          },
+          "schema:domainIncludes":{
+            "@id": "schema:OrganizationRole"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+        {
+          "@id": "kzs:stockholder",
+          "@type": "rdf:Property",
+          "rdfs:comment": "A person or organization that holds the stock of Organization.",
+          "rdfs:label": "stockholder",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:sponsor"
+          },
+          "schema:domainIncludes": {
+            "@id": "kzs:Company"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Person"
+            },
+            {
+              "@id": "kzs:Company"
+            }
+          ]
+        },
+        {
+          "@id": "kzs:stockPercent",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The major in which a User studies.",
+          "rdfs:label": "stockPercent",
+          "schema:domainIncludes": {
+            "@id": "schema:OrganizationRole"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Float"
+          }
+        },
+        {
+          "@id": "kzs:organizationIndustry",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The industry associated with a Organization.",
+          "rdfs:label": "organizationIndustry",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:description"
+          },
+          "schema:domainIncludes": {
+            "@id": "kzs:Company"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+        {
+          "@id": "kzs:inDepartment",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The department in which a User works.",
+          "rdfs:label": "inDepartment",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:description"
+          },
+          "schema:domainIncludes": {
+            "@id": "schema:OrganizationRole"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+        {
+          "@id": "kzs:capSalary",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The salary cap of the job or of an employee in an EmployeeRole.",
+          "rdfs:label": "capSalary",
+          "schema:domainIncludes": [
+            {
+              "@id": "schema:EmployeeRole"
+            },
+            {
+              "@id": "schema:JobPosting"
+            }
+          ],
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:Number"
+            },
+            {
+              "@id": "schema:MonetaryAmount"
+            },
+            {
+              "@id": "schema:PriceSpecification"
+            }
+          ]
+        },
+        {
+          "@id": "kzs:dateTimePosted",
+          "@type": "rdf:Property",
+          "schema:domainIncludes": {
+            "@id": "schema:JobPosting"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:DateTime"
+          },
+          "rdfs:comment": "Publication date and time for the job posting.",
+          "rdfs:label": "dateTimePosted"
+        },
+        {
+          "@id": "kzs:addressLevel",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The level of address marked by NER.",
+          "rdfs:label": "addressLevel",
+          "schema:domainIncludes": {
+            "@id": "schema:Place"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:AddressLevelType"
+          }
+        },
+        {
+          "@id": "kzs:streetNumber",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The number of street.",
+          "rdfs:label": "streetNumber",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:description"
+          },
+          "schema:domainIncludes": {
+            "@id": "schema:Place"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+	    	{
+          "@id": "kzs:originalName",
+          "@type": "rdf:Property",
+          "rdfs:comment": "An used name for the item.",
+          "rdfs:label": "originalName",
+          "schema:domainIncludes": {
+            "@id": "schema:Thing"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+	    	},
+	    	{
+		      "@id": "kzs:standardEducationRequirements",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Standard educational background needed for the jobposting.",
+          "rdfs:label": "standardEducationRequirements",
+          "schema:domainIncludes": {
+            "@id": "schema:JobPosting"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:EducationRequirementsType"
+          }
+	    	},
+	    	{
+		      "@id": "kzs:standardExperienceRequirements",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Standard description of experience needed for the jobposting.",
+          "rdfs:label": "standardExperienceRequirements",
+          "schema:domainIncludes": {
+            "@id": "schema:JobPosting"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:ExperienceRequirementsType"
+          }
+		    },
+		    {
+		      "@id": "kzs:hasWechatAccount",
+          "@type": "rdf:Property",
+          "rdfs:comment": "WechatAccount owing to a User.",
+          "rdfs:label": "hasWechatAccount",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:WechatAccount"
+          }
+		    },
+		    {
+		      "@id": "kzs:suffix",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Suffix of a EmailAccount.",
+          "rdfs:label": "suffix",
+		      "rdfs:subPropertyOf": {
+            "@id": "schema:description"
+          },
+          "schema:domainIncludes": {
+            "@id": "kzs:EmailAccount"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+		    },
+	    	{
+		      "@id": "kzs:hasEmailAccount",
+          "@type": "rdf:Property",
+          "rdfs:comment": "EmailAccount owing to a User.",
+          "rdfs:label": "hasEmailAccount",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:EmailAccount"
+          }
+		    },
+		    {
+		      "@id": "kzs:hasPhoneNumber",
+          "@type": "rdf:Property",
+          "rdfs:comment": "PhoneNumber owing to a User.",
+          "rdfs:label": "hasPhoneNumber",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:PhoneNumber"
+          }
+        },
+        {
+          "@id": "kzs:deviceid",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Deviceid of a mobile phone.",
+          "rdfs:label": "deviceid",
+		      "rdfs:subPropertyOf": {
+            "@id": "schema:identifier"
+          },
+          "schema:domainIncludes": {
+            "@id": "kzs:PhoneSpecification"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+        {
+          "@id": "kzs:idfa",
+          "@type": "rdf:Property",
+          "rdfs:comment": "IDFA of a Iphone.",
+          "rdfs:label": "idfa",
+          "rdfs:subPropertyOf": {
+            "@id": "schema:identifier"
+          },
+          "schema:domainIncludes": {
+            "@id": "kzs:PhoneSpecification"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Text"
+          }
+        },
+        {
+          "@id": "kzs:hasPhoneSpecification",
+          "@type": "rdf:Property",
+          "rdfs:comment": "PhoneSpecification owing to a User.",
+          "rdfs:label": "hasPhoneSpecification",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:PhoneSpecification"
+          }
+        },
+        {
+          "@id": "kzs:hasIPAddress",
+          "@type": "rdf:Property",
+          "rdfs:comment": "IPAddress owing to a User.",
+          "rdfs:label": "hasIPAddress",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:IPAddress"
+          }
+        },
+        {
+          "@id": "kzs:hasSSIDSpecification",
+          "@type": "rdf:Property",
+          "rdfs:comment": "SSIDSpecification owing to a User.",
+          "rdfs:label": "hasSSIDSpecification",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:SSIDSpecification"
+          }
+        },
+        {
+          "@id": "kzs:hasBSSIDSpecification",
+          "@type": "rdf:Property",
+          "rdfs:comment": "BSSIDSpecification owing to a User.",
+          "rdfs:label": "hasBSSIDSpecification",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:BSSIDSpecification"
+          }
+        },
+        {
+          "@id": "kzs:broadcast",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Mac broadcast wifi.",
+          "rdfs:label": "broadcast",
+          "schema:domainIncludes": {
+            "@id": "kzs:BSSIDSpecification"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:SSIDSpecification"
+          }
+        },
+        {
+          "@id": "kzs:bssidGeo",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The geo coordinates of the mac.",
+          "rdfs:label": "bssidGeo",
+          "schema:domainIncludes": {
+            "@id": "kzs:BSSIDSpecification"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:GeoCoordinates"
+          }
+        },
+        {
+          "@id": "kzs:userGeo",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The geo coordinates of the user.",
+          "rdfs:label": "userGeo",
+          "schema:domainIncludes": {
+            "@id": "kzs:User"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:GeoCoordinates"
+          }
+        },
+        {
+          "@id": "kzs:coordinates",
+          "@type": "rdf:Property",
+          "rdfs:comment": "The geo coordinates of the user.",
+          "rdfs:label": "coordinates",
+          "schema:domainIncludes": {
+            "@id": "schema:GeoCoordinates"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:Coordinates"
+          }
+        },
+        {
+          "@id": "kzs:loginTimes",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Login times.",
+          "rdfs:label": "loginTimes",
+          "schema:domainIncludes": {
+            "@id": "kzs:LoginRole"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Integer"
+          }
+        },
+        {
+          "@id": "kzs:insuredCount",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Number of insured employee.",
+          "rdfs:label": "insuredCount",
+          "schema:domainIncludes": {
+            "@id": "kzs:Company"
+          },
+          "schema:rangeIncludes": {
+            "@id": "schema:Integer"
+          }
+        },
+        {
+          "@id": "kzs:auditStatus",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Audit result of company.",
+          "rdfs:label": "auditStatus",
+          "schema:domainIncludes": {
+            "@id": "kzs:Company"
+          },
+          "schema:rangeIncludes": {
+            "@id": "kzs:AuditStatusTypeFromKanzhun"
+          }
+        },
+        {
+          "@id": "kzs:AuditStatusTypeFromKanzhun",
+          "@type": "rdfs:Class",
+          "rdfs:comment": "Class Enumeration of audit result of company from kanzhun.",
+          "rdfs:label": "AuditStatusTypeFromKanzhun",
+          "rdfs:subClassOf": {
+            "@id": "schema:Enumeration"
+          }
+        },
+		    {
+          "@id": "kzs:InitFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "InitFromKanzhun"
+        },
+        {
+          "@id": "kzs:SuccFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "SuccFromKanzhun"
+        },
+        {
+          "@id": "kzs:FailFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "FailFromKanzhun"
+        },
+        {
+          "@id": "kzs:ChuanXiaoFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "ChuanXiaoFromKanzhun"
+        },
+        {
+          "@id": "kzs:ZhaPianOrBuLiangFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "ZhaPianOrBuLiangFromKanzhun"
+        },
+        {
+          "@id": "kzs:DiaoXiaoOrZhuXiaoFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "DiaoXiaoOrZhuXiaoFromKanzhun"
+        },
+        {
+          "@id": "kzs:WangJingFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "WangJingFromKanzhun"
+        },
+        {
+          "@id": "kzs:BlackListFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "BlackListFromKanzhun"
+        },
+        {
+          "@id": "kzs:QiYeShanSuFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "QiYeShanSuFromKanzhun"
+        },
+        {
+          "@id": "kzs:FaBuZheYaoQiuFromKanzhun",
+          "@type": "kzs:AuditStatusTypeFromKanzhun",
+          "rdfs:comment": "One Class of AuditStatusTypeFromKanzhun.",
+          "rdfs:label": "FaBuZheYaoQiuFromKanzhun"
+        },
+		    {
+		      "@id": "kzs:updateTime",
+          "@type": "rdf:Property",
+          "rdfs:comment": "Update time of information.",
+          "rdfs:label": "updateTime",
+          "schema:domainIncludes": {
+            "@id": "kzs:Company"
+          },
+          "schema:rangeIncludes": [
+            {
+              "@id": "schema:DateTime"
+            },
+            {
+              "@id": "schema:Date"
+            },
+            {
+              "@id": "schema:Text"
+            }
+          ]
+		    }
+      ]
+    }
+  ]
+}

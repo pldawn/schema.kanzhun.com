@@ -1,0 +1,102 @@
+{
+	"@context": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"@vocab": {
+		"addresses": {
+			"@align": "schema:foundingLocation",
+			"@domain": "kzs:Company"
+		},
+		"branch": [
+			{
+				"@align": "schema:branch",
+				"@domain": "kzs:Company"
+			},
+			{
+				"@align": "kzs:stockholder",
+				"@reverse": "True",
+				"@domain": "kzs:Company"
+			}
+		],
+		"businessTerm": {
+			"@align": "schema:dissolutionDate",
+			"@domain": "kzs:Company"
+		},
+		"category": {
+			"@align": ""
+		},
+		"changeRecord": {
+			"@align": ""
+		},
+		"creditCode": {
+			"@align": "kzs:creditCode",
+			"@domain": "kzs:Company"
+		},
+		"description": {
+			"@align": "schema:description",
+			"@domain": "kzs:Company"
+		},
+		"englishName": {
+			"@align": "kzs:foreignName",
+			"@domain": "kzs:Company"
+		},
+		"generalProject": {
+			"@align": ""
+		},
+		"id": {
+			"@align": ""
+		},
+		"invest": {
+			"@align": "kzs:stockholder",
+			"@reverse": "True",
+			"@domain": "kzs:Company"
+		},
+		"legalRepresentativeKeyno": {
+			"@align": "",
+			"@id": "schema:Person"
+		},
+		"licensedProject": {
+			"@align": ""
+		},
+		"managementMode": {
+			"@align": ""
+		},
+		"managers": {
+			"@align": "kzs:manager",
+			"@domain": "kzs:Company"
+		},
+		"organizationCode": {
+			"@align": "kzs:organizationCode",
+			"@domain": "kzs:Company"
+		},
+		"paidCapital": {
+			"@align": "kzs:paidCapital",
+			"@domain": "kzs:Company"
+		},
+		"registrationAuthority": {
+			"@align": "kzs:registerAuthority",
+			"@domain": "kzs:Company"
+		},
+		"registrationNumber": {
+			"@align": "kzs:registerCode",
+			"@domain": "kzs:Company"
+		},
+		"scale": {
+			"@align": "schema:numberOfEmployees",
+			"@domain": "kzs:Company"
+		},
+		"scope": {
+			"@align": "kzs:businessScope",
+			"@domain": "kzs:Company"
+		},
+		"shareholderInfo": {
+			"@align": "kzs:stockholder",
+			"@domain": "kzs:Company"
+		},
+		"tax_view": {
+			"@align": ""
+		},
+		"taxpayerIdentityNumber": {
+			"@align": "kzs:taxpayerIdentity",
+			"@domain": "kzs:Company"
+		}
+	}
+}

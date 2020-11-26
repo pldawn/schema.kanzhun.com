@@ -1,0 +1,61 @@
+{
+	"@context": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"@vocab": {
+		"kanzhun.company.id": {
+			"@align": "kzs:xid",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.full_name": {
+			"@align": "schema:legalName",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.name": {
+			"@align": "kzs:shortname",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.industry_code": {
+			"@align": "kzs:organizationIndustry",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.city_code": {
+			"@align": "kzs:headquarterCity",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.run_status": {
+			"@align": "kzs:businessStatus",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.startup_time": {
+			"@align": "schema:foundingDate",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company_photo.photo_url": {
+			"@align": "kzs:companyImage",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.url": {
+			"@align": "schema:url",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company_product.name": {
+			"@align": "kzs:offeredProduct",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.words_introduction": {
+			"@align": "schema:description",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company_extra.introduction": {
+			"@align": "schema:description",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.status": {
+			"@align": "kzs:auditStatus",
+			"@domain": "kzs:Company"
+		},
+		"kanzhun.company.updatetime": {
+			"@align": "kzs:updateTime",
+			"@domain": "kzs:Company"
+		}
+	}
+}

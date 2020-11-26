@@ -1,0 +1,157 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    {
+      "Person": "schema:Person",
+      "User": "kzs:User",
+      "Organization": "schema:Organization",
+      "OrganizationRole": "schema:OrganizationRole",
+      "QuantitativeValue": "schema:QuantitativeValue",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": ["User", "Organization"],
+        "@type": "Integer"
+      },
+      "name": {
+        "@id": "schema:name",
+		"@domain": ["Person", "User"],
+        "@type": "Text"
+      },
+      "legalName": {
+        "@id": "schema:legalName",
+		"@domain": "Organization",
+        "@type": "Text"
+      },
+      "alternateName": {
+        "@id": "schema:alternateName",
+		"@domain": "Organization",
+        "@type": "Text"
+      },
+	  "originalName": {
+        "@id": "schema:originalName",
+		"@domain": "Organization",
+        "@type": "Text"
+      },
+      "organizationIndustry": {
+        "@id": "kzs:organizationIndustry",
+		"@domain": "Organization",
+        "@type": "Text"
+      },
+      "numberOfEmployees": {
+        "@id": "schema:numberOfEmployees",
+		"@domain": "Organization",
+        "@range": "schema:QuantitativeValue"
+      },
+      "registerTime": {
+        "@id": "kzs:registerTime",
+		"@domain": "Organization",
+        "@type": "DateTime"
+      },
+      "startDate": {
+        "@id": "schema:startDate",
+		"@domain": "OrganizationRole",
+        "@type": "Date"
+      },
+      "endDate": {
+        "@id": "schema:endDate",
+		"@domain": "OrganizationRole",
+        "@type": "Date"
+      },
+      "inDepartment": {
+        "@id": "kzs:inDepartment",
+		"@domain": "OrganizationRole",
+        "@type": "Text"
+      },
+      "stockPercent": {
+        "@id": "kzs:stockPercent",
+		"@domain": "OrganizationRole",
+        "@type": "Float"
+      },
+      "value": {
+        "@id": "schema:value",
+		"@domain": "QuantitativeValue",
+        "@type": "Integer"
+      },
+      "description": {
+        "@id": "schema:description",
+		"@domain": "Person",
+        "@type": "Text"
+      },
+      "employee": {
+        "@reverse": "schema:worksFor",
+		"@domain": ["Organization", "OrganizationRole"],
+        "@range": ["User", "OrganizationRole"]
+      },
+      "stockholder": {
+        "@id": "kzs:stockholder",
+		"@domain": ["Organization", "OrganizationRole"],
+        "@range": ["Person", "Organization", "OrganizationRole"]
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/Organization.jsonld",
+      "@comment": "create a organization.",
+      "@id": "kzidv:Organization#1",
+      "@type": "Organization",
+      "xid": "540791",
+      "legalName": "北京华品博睿网络技术有限公司",
+      "alternateName": ["华品博睿", "Boss直聘", "看准网"],
+      "organizationIndustry": "100014",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": "303"
+      },
+      "registerTime": "2014-02-16T19:01:29",
+      "employee": [
+        {
+          "@type": "OrganizationRole",
+          "employee": {
+            "@id": "kzidv:User#1",
+            "@type": "User"
+          },
+          "inDepartment": "A部门",
+          "startDate": "2014-03-22",
+          "endDate": "2016-11-20"
+        },
+        {
+          "@type": "OrganizationRole",
+          "employee": {
+            "@id": "kzidv:User#2",
+            "@type": "User"
+          },
+          "inDepartment": "B部门",
+          "startDate": "2010-11-12",
+          "endDate": "2014-07-19"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/Organization.jsonld",
+      "@comment": "establish holding structure of companies.",
+      "@id": "kzidv:Organization#1",
+      "@type": "Organization",
+      "stockholder": [
+        {
+          "@type": "OrganizationRole",
+          "stockholder": {
+            "@id": "kzidv:Organization#1",
+            "@type": "Organization"
+          },
+          "stockPercent": "50%"
+        },
+        {
+          "@type": "OrganizationRole",
+          "stockholder": {
+            "@id": "kzidv:NotUser#1",
+            "@type": "Person",
+            "name": "李冰",
+            "description": "140602xxxx1710"
+          },
+          "stockPercent": "50%"
+        }
+      ]
+    }
+  ]
+}

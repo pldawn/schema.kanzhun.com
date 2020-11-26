@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    {
+      "User": "kzs:User",
+	  "ServiceMembership": "kzs:ServiceMembership",
+	  "ServiceMembershipType": "kzs:ServiceMembershipType",
+      "Boss": "kzs:Boss",
+      "Geek": "kzs:Geek",
+	  "Hunter": "kzs:Hunter",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": "User",
+        "@type": "Integer"
+      },
+      "name": {
+        "@id": "schema:name",
+		"@domain": ["User", "ServiceMembership"],
+        "@type": "Text"
+      },
+      "registerBy": {
+	    "@reverse": "kzs:register",
+		"@domain": "ServiceMembership",
+        "@range": "User"
+      },
+      "serviceType": {
+        "@id": "kzs:serviceType",
+		"@domain": "ServiceMembership",
+        "@range": "ServiceMembershipType",
+		"@enumeration": ["Boss", "Geek", "Hunter"]
+      },
+      "certification": {
+        "@id": "kzs:certification",
+		"@domain": "ServiceMembership",
+        "@type": "Integer"
+      },
+	  "registerTime": {
+        "@id": "kzs:registerTime",
+		"@domain": "ServiceMembership",
+        "@type": "DateTime"
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/ServiceMembership.jsonld",
+      "@comment": "create a ServiceMembership.",
+      "@id": "kzidv:ServiceMembership#1",
+      "@type": "ServiceMembership",
+	  "registerBy": {
+	    "@id": "kzidv:User#1",
+		"@type": "User",
+		"xid": "32087823"
+	  },
+	  "serviceType": "Boss",
+  	  "name": "张文涛",
+	  "registerTime": "2017-10-26T11:02:30",
+	  "certification": "3"
+	}
+  ]
+}

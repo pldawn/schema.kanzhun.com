@@ -1,0 +1,23 @@
+{
+  "@context": {
+	"UnlimitedDegree": "https://schema.kanzhun.com/schema/UnlimitedDegree",
+    "PrimarySchoolAbove": "https://schema.kanzhun.com/schema/PrimarySchoolAbove",
+    "PrimarySchoolBelow": "https://schema.kanzhun.com/schema/PrimarySchoolBelow",
+	"MiddleSchoolAbove": "https://schema.kanzhun.com/schema/MiddleSchoolAbove",
+	"MiddleSchoolBelow": "https://schema.kanzhun.com/schema/MiddleSchoolBelow",
+	"SecondaryCollegeAbove": "https://schema.kanzhun.com/schema/SecondaryCollegeAbove",
+	"SecondaryCollegeBelow": "https://schema.kanzhun.com/schema/SecondaryCollegeBelow",
+	"HighSchoolAbove": "https://schema.kanzhun.com/schema/HighSchoolAbove",
+	"HighSchoolBelow": "https://schema.kanzhun.com/schema/HighSchoolBelow",
+	"CollegeAbove": "https://schema.kanzhun.com/schema/CollegeAbove",
+	"CollegeBelow": "https://schema.kanzhun.com/schema/CollegeBelow",
+	"BachelorAbove": "https://schema.kanzhun.com/schema/BachelorAbove",
+	"BachelorBelow": "https://schema.kanzhun.com/schema/BachelorBelow",
+	"MasterAbove": "https://schema.kanzhun.com/schema/MasterAbove",
+	"MasterBelow": "https://schema.kanzhun.com/schema/MasterBelow",
+	"DoctorAbove": "https://schema.kanzhun.com/schema/DoctorAbove",
+	"DoctorBelow": "https://schema.kanzhun.com/schema/DoctorBelow",
+	"PostdoctoralAbove": "https://schema.kanzhun.com/schema/PostdoctoralAbove",
+	"PostdoctoralBelow": "https://schema.kanzhun.com/schema/PostdoctoralBelow"
+  }
+}

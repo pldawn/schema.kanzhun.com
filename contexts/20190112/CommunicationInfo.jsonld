@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    {
+      "User": "kzs:User",
+	  "WechatAccount": "kzs:WechatAccount",
+	  "EmailAccount": "kzs:EmailAccount",
+	  "PhoneNumber": "kzs:PhoneNumber",
+      "identifier": {
+        "@id": "schema:identifier",
+		"@domain": ["WechatAccount", "EmailAccount", "PhoneNumber"],
+        "@type": "Text"
+      },
+	  "registerTime": {
+        "@id": "kzs:registerTime",
+		"@domain": ["WechatAccount", "EmailAccount", "PhoneNumber"],
+        "@type": "DateTime"
+      },
+      "suffix": {
+        "@id": "kzs:suffix",
+		"@domain": "EmailAccount",
+        "@type": "Text"
+      },
+      "hasWechatAccount": {
+        "@id": "kzs:hasWechatAccount",
+		"@domain": "User",
+        "@range": "WechatAccount"
+      },
+      "hasEmailAccount": {
+        "@id": "kzs:hasEmailAccount",
+		"@domain": "User",
+        "@range": "EmailAccount"
+      },
+      "hasPhoneNumber": {
+        "@id": "kzs:hasPhoneNumber",
+		"@domain": "User",
+        "@range": "PhoneNumber"
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/CommunicationInfo.jsonld",
+      "@comment": "create a User's communication information.",
+      "@id": "kzidv:User#1",
+      "@type": "User",
+	  "hasWechatAccount": [
+	    {
+		  "@id": "kzidv:WechatAccount#1",
+		  "@type": "WechatAccount",
+		  "identifier": "artoria",
+		  "registerTime": "2017-10-26T11:02:30"
+		},
+		{
+		  "@id": "kzidv:WechatAccount#2",
+		  "@type": "WechatAccount",
+		  "identifier": "30002912"
+		}
+	  ],
+	  "hasEmailAccount": [
+	    {
+		  "@id": "kzidv:EmailAccount#1",
+		  "@type": "EmailAccount",
+		  "identifier": "zhangwentao@kanzhun.com",
+		  "suffix": "kanzhun.com",
+		  "registerTime": "2017-10-26T11:02:30"
+		},
+		{
+		  "@id": "kzidv:EmailAccount#2",
+		  "@type": "EmailAccount",
+		  "identifier": "zhangxxx@163.com"
+		}
+	  ],
+	  "hasPhoneNumber": [
+	    {
+		  "@id": "kzidv:PhoneNumber#1",
+		  "@type": "PhoneNumber",
+		  "identifier": "135xxxxyyyy",
+		  "registerTime": "2017-10-26T11:02:30"
+		},
+		{
+		  "@id": "kzidv:PhoneNumber#2",
+		  "@type": "PhoneNumber",
+		  "identifier": "139zzzzxxxx"
+		}
+	  ]
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/CommunicationInfo.jsonld",
+      "@comment": "update a User's communication information.",
+      "@id": "kzidv:EmailAccount#1",
+      "@type": "EmailAccount",
+      "suffix": "kanzhun.com",
+	  "registerTime": "2017-10-26T11:02:30"
+    }
+  ]
+}

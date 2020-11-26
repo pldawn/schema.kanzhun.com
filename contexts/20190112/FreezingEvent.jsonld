@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+    {
+      "User": "kzs:User",
+      "FreezingEvent": "kzs:FreezingEvent",
+	  "FreezingEventType": "kzs:FreezingEventType",
+	  "Freeze": "kzs:Freeze",
+	  "Unfreeze": "kzs:Unfreeze",
+      "reason": {
+        "@id": "schema:name",
+		"@domain": ["User", "FreezingEvent"],
+        "@type": "Text"
+      },
+      "startDate": {
+        "@id": "schema:startDate",
+		"@domain": "FreezingEvent",
+        "@type": "DateTime"
+      },
+      "endDate": {
+        "@id": "schema:endDate",
+		"@domain": "FreezingEvent",
+        "@type": "DateTime"
+      },
+      "freezeUser": {
+        "@id": "schema:attendee",
+		"@domain": "FreezingEvent",
+        "@range": "User"
+      },
+	  "eventType": {
+        "@id": "kzs:eventType",
+		"@domain": "FreezingEvent",
+        "@range": "FreezingEventType",
+		"@enumeration": ["Freeze", "Unfreeze"]
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/FreezingEvent.jsonld",
+      "@comment": "create an event about freezing a user.",
+      "@id": "kzidv:FreezingEvent#1",
+      "@type": "FreezingEvent",
+      "reason": "130007",
+	  "eventType": "Freeze",
+      "startDate": "2018-11-21T09:50:20",
+      "freezeUser": {
+        "@id": "kzidv:User#1",
+        "@type": "User"
+      }
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/FreezingEvent.jsonld",
+      "@comment": "update an event about unfreezing a user who is freezed early.",
+      "@id": "kzidv:FreezingEvent#1",
+      "@type": "FreezingEvent",
+	  "reason": "130007",
+      "eventType": "Unfreeze"
+    }
+  ]
+}

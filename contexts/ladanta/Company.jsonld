@@ -1,0 +1,802 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+		"https://schema.kanzhun.com/contexts/ladanta/CompanyType.jsonld",
+		"https://schema.kanzhun.com/contexts/ladanta/CompanyExtensionFromQichacha.jsonld",
+		"https://schema.kanzhun.com/contexts/ladanta/CompanyExtensionFromKanzhun.jsonld",
+    {
+	  "Company": "kzs:Company",
+	  "Person": "schema:Person",
+	  "User": "kzs:User",
+	  "Place": "schema:Place",
+	  "OrganizationFormType": "kzs:OrganizationFormType",
+	  "EnterpriseEconomicType": "kzs:EnterpriseEconomicType",
+	  "BusinessStatusType": "kzs:BusinessStatusType",
+	  "Organization": "schema:Organization",
+	  "ImageObject": "schema:ImageObject",
+	  "URL": "schema:URL",
+	  "Product": "kzs:Product",
+	  "Office": "kzs:Office",
+	  "EmailAccount": "kzs:EmailAccount",
+	  "PhoneNumber": "kzs:PhoneNumber",
+	  "QuantitativeValue": "schema:QuantitativeValue",
+	  "StockMarket": "kzs:StockMarket",
+	  "Brand": "schema:Brand",
+	  "BankAccount": "schema:BankAccount",
+	  "PublicSentiment": "kzs:PublicSentiment",
+	  "VideoObject": "schema:VideoObject",
+	  "InnerDepartment": "kzs:InnerDepartment",
+	  "JobPosting": "schema:JobPosting",  
+	  "OrganizationRole": "schema:OrganizationRole",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": ["Company", "User", "JobPosting"],
+        "@type": "Integer"
+      },
+	  "legalName": {
+		"@id": "schema:legalName",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "usedName": {
+		"@id": "kzs:usedName",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "shortName": {
+		"@id": "kzs:shortName",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "aliasName": {
+		"@id": "kzs:aliasName",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "usedShortName": {
+		"@id": "kzs:usedShortName",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "legalPerson": {
+		"@id": "kzs:legalPerson",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "foundingLocation": {
+		"@id": "schema:foundingLocation",
+		"@domain": "Company",
+		"@range": ["Text", "Place"]
+	  },
+	  "foundingDate": {
+		"@id": "schema:foundingDate",
+		"@domain": "Company",
+		"@type": "Date"
+	  },
+	  "registeredCapital": {
+		"@id": "kzs:registeredCapital",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "organizationForm": {
+		"@id": "kzs:organizationForm",
+		"@domain": "Company",
+		"@range": "OrganizationFormType",
+		"@enumeration": ["DuZiQiYe", "PuTongHeHuoQiYe", "YouXianHeHuoQiYe", "GuFenYouXianGongSi", "YouXianZeRenGongSi"]
+	  },
+	  "economicType": {
+		"@id": "kzs:economicType",
+		"@domain": "Company",
+		"@range": "EnterpriseEconomicType",
+		"@enumeration": ["GuoYouJingJi", "JiTiJingJi", "SiYingJingJi", "GeTiJingJi", "LianYingJingJi", "GuFenZhi", "WaiShangTouZi", "GangAoTaiTouZi", "QiTaJingJi"]
+	  },
+	  "businessStatus": {
+		"@id": "kzs:businessStatus",
+		"@domain": "Company",
+		"@range": "BusinessStatusType",
+		"@enumeration": ["CunXu", "ZaiYe", "DiaoXiao", "ZhuXiao", "QianRu", "QianChu", "TingYe", "QingSuan"]
+	  },
+	  "businessScope": {
+		"@id": "kzs:businessScope",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "dissolutionDate": {
+		"@id": "schema:dissolutionDate",
+		"@domain": "Company",
+		"@type": "Date"
+	  },
+	  "creditCode": {
+		"@id": "kzs:creditCode",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "registerCode": {
+		"@id": "kzs:registerCode",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "taxpayerIdentity": {
+		"@id": "kzs:taxpayerIdentity",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "organizationCode": {
+		"@id": "kzs:organizationCode",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "registerAuthority": {
+		"@id": "kzs:registerAuthority",
+		"@domain": "Company",
+		"@range": ["Text", "Organization"]
+	  },
+	  "checkDate": {
+		"@id": "kzs:checkDate",
+		"@domain": "Company",
+		"@type": "DateTime"
+	  },
+	  "businessLicense": {
+		"@id": "kzs:businessIicense",
+		"@domain": "Company",
+		"@range": ["ImageObject", "URL"]
+	  },
+	  "description": {
+		"@id": "schema:description",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "companyImage": {
+		"@id": "kzs:companyImage",
+		"@domain": "Company",
+		"@range": ["ImageObject", "URL"]
+	  },
+	  "offeredProduct": {
+		"@id": "kzs:offeredProduct",
+		"@domain": "Company",
+		"@range": ["Text", "Product"]
+	  },
+	  "officeLocation": {
+		"@id": "kzs:officeLocation",
+		"@domain": "Company",
+		"@range": ["Text", "Place", "Office"]
+	  },
+	  "headquarterLocation": {
+		"@id": "kzs:headquarterLocation",
+		"@domain": "Company",
+		"@range": ["Text", "Place", "Office"]
+	  },
+	  "headquarterCity": {
+		"@id": "kzs:headquarterCity",
+		"@domain": "Company",
+		"@range": ["Text", "Place"]
+	  },
+	  "hasEmailAccount": {
+		"@id": "kzs:hasEmailAccount",
+		"@domain": "Company",
+		"@range": "EmailAccount"
+	  },
+	  "hasPhoneNumber": {
+		"@id": "kzs:hasPhoneNumber",
+		"@domain": "Company",
+		"@range": "PhoneNumber"
+	  },
+	  "url": {
+		"@id": "schema:url",
+		"@domain": "Company",
+		"@range": "URL"
+	  },
+	  "ceo": {
+		"@id": "kzs:ceo",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "founder": {
+		"@id": "schema:founder",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "numberOfEmployees": {
+		"@id": "schema:numberOfEmployees",
+		"@domain": "Company",
+		"@range": ["Integer", "Text", "QuantitativeValue"]
+	  },
+	  "ipoDate": {
+		"@id": "kzs:ipoDate",
+		"@domain": "Company",
+		"@type": "DateTime"
+	  },
+	  "ipoMarket": {
+		"@id": "kzs:ipoMarket",
+		"@domain": "Company",
+		"@range": "StockMarket"
+	  },
+	  "stockCode": {
+		"@id": "kzs:stockCode",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "stockholder": {
+		"@id": "kzs:stockholder",
+		"@domain": "Company",
+		"@range": ["Person", "Company", "OrganizationRole"]
+	  },
+	  "organizationIndustry": {
+		"@id": "kzs:organizationIndustry",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "brand": {
+		"@id": "schema:brand",
+		"@domain": "Company",
+		"@range": "Brand"
+	  },
+	  "hasBankAccount": {
+		"@id": "kzs:hasBankAccount",
+		"@domain": "Company",
+		"@range": "BankAccount"
+	  },
+	  "awards": {
+		"@id": "schema:awards",
+		"@domain": "Company",
+		"@range": ["Text", "URL"]
+	  },
+	  "certificate": {
+		"@id": "kzs:certificate",
+		"@domain": "Company",
+		"@range": ["Text", "ImageObject", "URL"]
+	  },
+	  "relatedPublicSentiment": {
+		"@id": "kzs:relatedPublicSentiment",
+		"@domain": "Company",
+		"@range": "PublicSentiment"
+	  },
+	  "patents": {
+		"@id": "kzs:patents",
+		"@domain": "Company",
+		"@range": ["Text", "URL"]
+	  },
+	  "video": {
+		"@id": "kzs:video",
+		"@domain": "Company",
+		"@range": ["VideoObject", "URL"]
+	  },
+	  "executives": {
+		"@id": "kzs:executives",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "manager": {
+		"@id": "kzs:manager",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "recruiter": {
+		"@id": "kzs:recruiter",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "employee": {
+		"@reverse": "kzs:worksFor",
+		"@domain": "Company",
+		"@range": ["Person", "OrganizationRole"]
+	  },
+	  "inDepartment": {
+		"@id": "kzs:inDepartment",
+		"@domain": "OrganizationRole",
+		"@type": "Text"
+	  },
+	  "startDate": {
+		"@id": "kzs:startDate",
+		"@domain": "OrganizationRole",
+		"@type": "DateTime"
+	  },
+	  "endDate": {
+		"@id": "kzs:endDate",
+		"@domain": "OrganizationRole",
+		"@type": "DateTime"
+	  },
+	  "stockholderOf": {
+		"@reverse": "kzs:stockholder",
+		"@domain": "Company",
+		"@range": ["Company", "OrganizationRole"]
+	  },
+	  "stockPercent": {
+		"@id": "kzs:stockPercent",
+		"@domain": "OrganizationRole",
+		"@type": "Text"
+	  },
+	  "supplier": {
+		"@id": "kzs:supplier",
+		"@domain": "Company",
+		"@range": ["Person", "Company"]
+	  },
+	  "customer": {
+		"@id": "kzs:customer",
+		"@domain": "Company",
+		"@range": ["Person", "Company"]
+	  },
+	  "department": {
+		"@id": "schema:department",
+		"@domain": "Company",
+		"@range": "InnerDepartment"
+	  },
+	  "competitor": {
+		"@id": "kzs:competitor",
+		"@domain": "Company",
+		"@range": ["Person", "Company"]
+	  },
+	  "branch": {
+		"@id": "kzs:branch",
+		"@domain": "Company",
+		"@range": "Company"
+	  },
+	  "distributor": {
+		"@id": "kzs:distributor",
+		"@domain": "Company",
+		"@range": "Company"
+	  },
+	  "subCompany": {
+		"@id": "kzs:subCompany",
+		"@domain": "Company",
+		"@range": "Company"
+	  },
+	  "parentCompany": {
+		"@id": "kzs:parentCompany",
+		"@domain": "Company",
+		"@range": "Company"
+	  },
+	  "siblingCompany": {
+		"@id": "kzs:siblingCompany",
+		"@domain": "Company",
+		"@range": "Company"
+	  },
+	  "recruit": {
+		"@reverse": "kzs:hiringOrganization",
+		"@domain": "Company",
+		"@range": "JobPosting"
+	  },
+	  "providedCompanyBenefits": {
+		"@id": "kzs:providedCompanyBenefits",
+		"@domain": "Company",
+		"@type": "Text"
+	  },
+	  "registerTime": {
+		"@id": "kzs:registerTime",
+		"@domain": "Company",
+		"@type": "DateTime"
+	  },
+	  "superAdmin": {
+		"@id": "kzs:superAdmin",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "admin": {
+		"@id": "kzs:admin",
+		"@domain": "Company",
+		"@range": "Person"
+	  },
+	  "authorizationCertificate": {
+		"@id": "kzs:authorizationCertificate",
+		"@domain": "Company",
+		"@range": ["ImageObject", "URL"]
+	  },
+	  "value": {
+		"@id": "schema:value",
+		"@domain": "QuantitativeValue",
+		"type": "Integer"
+	  },
+	  "officeAddress": {
+		"@id": "kzs:officeAddress",
+		"@domain": "Office",
+		"type": "Text"
+	  },
+	  "identifier": {
+		"@id": "schema:identifier",
+		"@domain": ["PhoneNumber", "EmailAccount", "BankAccount"],
+		"type": "Text"
+	  },
+	  "name": {
+        "@id": "schema:name",
+        "@domain": ["Company", "Person", "User", "Place", "Organization", "ImageObject", "URL", "Product", "Office", "EmailAccount", "PhoneNumber", "StockMarket", "Brand", "BankAccount", "PublicSentiment", "VideoObject", "InnerDepartment", "JobPosting", "OrganizationRole"],
+        "type": "Text"
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/ladanta/Company.jsonld",
+      "@comment": "create a company.",
+      "@id": "kzidv:ladanta/Company#1",
+      "@type": "Company",
+      "xid": "540791",
+      "legalName": "北京华品博睿网络技术有限公司",
+	  "usedName": "xxx",
+	  "legalPerson": {
+		"@id": "kzidv:ladanta/Person#1",
+		"@type": "Person"
+	  },
+	  "foundingLocation": "xxx",
+	  "foundingDate": "xxx",
+	  "registeredCapital": "xxx",
+	  "organizationForm": "DuZiQiYe",
+	  "economicType": "SiYingJingJi",
+	  "businessStatus": "CunXu",
+	  "businessScope": "xxx",
+	  "dissolutionDate": "xxx",
+	  "creditCode": "xxx",
+	  "registerCode": "xxx",
+	  "taxpayerIdentity": "xxx",
+	  "organizationCode": "xxx",
+	  "registerAuthority": [
+	    {
+		  "@id": "kzidv:ladanta/Organization#1",
+		  "@type": "Organization"
+	    },
+		"xxx"
+	  ],
+	  "checkDate": "xxx",
+	  "businessLicense": {
+		"@id": "kzidv:ladanta/ImageObject#0",
+		"@type": "ImageObject"
+	  },
+	  "shortName": "xxx",
+	  "aliasName": "xxx",
+	  "usedShortName": "xxx",
+	  "description": "xxx",
+	  "companyImage": [
+		{
+		  "@id": "kzidv:ladanta/URL#1",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/ImageObject#1",
+		  "@type": "ImageObject"
+		}
+	  ],
+	  "offeredProduct": [
+		{
+		  "@id": "kzidv:ladanta/Product#1",
+		  "@type": "Product"
+		},
+		{
+		  "@id": "kzidv:ladanta/Product#2",
+		  "@type": "Product"
+		}
+	  ],
+	  "officeLocation": [
+		{
+		  "@id": "kzidv:ladanta/Office#1",
+		  "@type": "Office",
+		  "officeAddress": "xxx"
+		},
+		{
+		  "@id": "kzidv:ladanta/Office#2",
+		  "@type": "Office",
+		  "officeAddress": "xxx"
+		}
+	  ],
+	  "headquarterLocation": {
+		"@id": "kzidv:ladanta/Office#3",
+		"@type": "Office",
+		"officeAddress": "xxx"
+	  },
+	  "headquarterCity": "xxx",
+	  "hasEmailAccount": [
+		{
+		  "@id": "kzidv:ladanta/EmailAccount#1",
+		  "@type": "EmailAccount",
+		  "identifier": "xxx"
+		},
+		{
+		  "@id": "kzidv:ladanta/EmailAccount#2",
+		  "@type": "EmailAccount",
+		  "identifier": "xxx"
+		}
+	  ],
+	  "hasPhoneNumber": [
+		{
+		  "@id": "kzidv:ladanta/PhoneNumber#1",
+		  "@type": "PhoneNumber",
+		  "identifier": "xxx"
+		},
+		{
+		  "@id": "kzidv:ladanta/PhoneNumber#2",
+		  "@type": "PhoneNumber",
+		  "identifier": "xxx"
+		}
+	  ],
+	  "url": [
+		{
+		  "@id": "kzidv:ladanta/URL#2",
+		  "@type": "URL",
+		  "identifier": "www.kanzhun.com",
+		  "name": "看准网"
+		},
+		{
+		  "@id": "kzidv:ladanta/URL#3",
+		  "@type": "URL"
+		}
+	  ],
+	  "ceo": {
+		"@id": "kzidv:ladanta/Person#2",
+		"@type": "Person"
+	  },
+	  "founder": {
+		"@id": "kzidv:ladanta/Person#3",
+		"@type": "Person"
+	  },
+	  "numberOfEmployees": {
+		"@type": "kzidv:QuantitativeValue",
+		"value": "xxx"
+	  },
+	  "ipoDate": "xxx",
+	  "ipoMarket": [
+		{
+		  "@id": "kzidv:ladanta/StockMarket#1",
+		  "@type": "StockMarket"
+		},
+		{
+		  "@id": "kzidv:ladanta/StockMarket#2",
+		  "@type": "StockMarket"
+		}
+	  ],
+	  "stockCode": "xxx", 
+	  "organizationIndustry": "xxx",
+	  "brand": [
+		{
+		  "@id": "kzidv:ladanta/Brand#1",
+		  "@type": "Brand"
+		},
+		{
+		  "@id": "kzidv:ladanta/Brand#2",
+		  "@type": "Brand"
+		}
+	  ],
+	  "hasBankAccount": [
+		{
+		  "@id": "kzidv:ladanta/BankAccount#1",
+		  "@type": "BankAccount",
+		  "identifier": "xxx"
+		},
+		{
+		  "@id": "kzidv:ladanta/BankAccount#2",
+		  "@type": "BankAccount",
+		  "identifier": "xxx"
+		}
+	  ],
+	  "awards": [
+		{
+		  "@id": "kzidv:ladanta/URL#4",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/URL#5",
+		  "@type": "URL"
+		}
+	  ],
+	  "certificate": [
+		{
+		  "@id": "kzidv:ladanta/URL#6",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/ImageObject#2",
+		  "@type": "ImageObject"
+		}
+	  ],
+	  "relatedPublicSentiment": [
+		{
+		  "@id": "kzidv:ladanta/PublicSentiment#1",
+		  "@type": "PublicSentiment"
+		},
+		{
+		  "@id": "kzidv:ladanta/PublicSentiment#2",
+		  "@type": "PublicSentiment"
+		}
+	  ],
+	  "patents": [
+		{
+		  "@id": "kzidv:ladanta/URL#7",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/ImageObject#3",
+		  "@type": "ImageObject"
+		}
+	  ],
+	  "video": [
+		{
+		  "@id": "kzidv:ladanta/URL#8",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/VideoObject#1",
+		  "@type": "VideoObject"
+		}
+	  ],
+	  "executives": {
+		"@id": "kzidv:ladanta/Person#5",
+		"@type": "Person"
+	  },
+	  "manager": {
+		"@id": "kzidv:ladanta/Person#6",
+		"@type": "Person"
+	  },
+	  "recruiter": {
+		"@id": "kzidv:ladanta/Person#7",
+		"@type": "Person"
+	  },
+	  "employee": [
+        {
+          "@type": "OrganizationRole",
+          "employee": {
+            "@id": "kzidv:ladanta/User#1",
+            "@type": "User"
+          },
+          "inDepartment": "A部门",
+          "startDate": "2014-03-22",
+          "endDate": "2016-11-20"
+        },
+        {
+          "@type": "OrganizationRole",
+          "employee": {
+            "@id": "kzidv:ladanta/User#2",
+            "@type": "User"
+          },
+          "inDepartment": "B部门",
+          "startDate": "2010-11-12",
+          "endDate": "2014-07-19"
+        }
+      ],
+	  "stockholderOf": [
+        {
+          "@type": "OrganizationRole",
+          "stockholderOf": {
+            "@id": "kzidv:ladanta/Organization#1",
+            "@type": "Organization"
+          },
+          "stockPercent": "50%"
+        }
+      ],
+	  "stockholder": [
+        {
+          "@type": "OrganizationRole",
+          "stockholder": {
+            "@id": "kzidv:ladanta/Organization#2",
+            "@type": "Organization"
+          },
+          "stockPercent": "50%"
+        },
+        {
+          "@type": "OrganizationRole",
+          "stockholder": {
+            "@id": "kzidv:ladanta/Person#1",
+            "@type": "Person"
+          },
+          "stockPercent": "50%"
+        }
+      ],
+	  "supplier": [
+		{
+		  "@id": "kzidv:ladanta/Person#10",
+		  "@type": "Person"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#1",
+		  "@type": "Company"
+		}
+	  ],
+	  "customer": [
+		{
+		  "@id": "kzidv:ladanta/Person#11",
+		  "@type": "Person"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#2",
+		  "@type": "Company"
+		}
+	  ],
+	  "department": [
+		{
+		  "@id": "kzidv:ladanta/InnerDepartment#1",
+		  "@type": "InnerDepartment"
+		},
+		{
+		  "@id": "kzidv:ladanta/InnerDepartment#2",
+		  "@type": "InnerDepartment"
+		}
+	  ],
+	  "competitor": [
+		{
+		  "@id": "kzidv:ladanta/Person#12",
+		  "@type": "Person"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#3",
+		  "@type": "Company"
+		}
+	  ],
+	  "branch": [
+		{
+		  "@id": "kzidv:ladanta/Company#4",
+		  "@type": "Company"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#5",
+		  "@type": "Company"
+		}
+	  ],
+	  "distributor": [
+		{
+		  "@id": "kzidv:ladanta/Company#6",
+		  "@type": "Company"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#7",
+		  "@type": "Company"
+		}
+	  ],
+	  "subCompany": [
+		{
+		  "@id": "kzidv:ladanta/Company#8",
+		  "@type": "Company"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#9",
+		  "@type": "Company"
+		}
+	  ],
+	  "parentCompany": [
+		{
+		  "@id": "kzidv:ladanta/Company#10",
+		  "@type": "Company"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#11",
+		  "@type": "Company"
+		}
+	  ],
+	  "siblingCompany": [
+		{
+		  "@id": "kzidv:ladanta/Company#12",
+		  "@type": "Company"
+		},
+		{
+		  "@id": "kzidv:ladanta/Company#13",
+		  "@type": "Company"
+		}
+	  ],
+	  "recruit": [
+		{
+		  "@id": "kzidv:ladanta/JobPosting#1",
+		  "@type": "JobPosting"
+		},
+		{
+		  "@id": "kzidv:ladanta/JobPosting#2",
+		  "@type": "JobPosting"
+		}
+	  ],
+	  "providedCompanyBenefits": "xxx",
+	  "registerTime": "xxx",
+	  "superAdmin": {
+		"@id": "kzidv:ladanta/Person#8",
+		"@type": "Person"
+	  },
+	  "admin": {
+		"@id": "kzidv:ladanta/Person#9",
+		"@type": "Person"
+	  },
+	  "authorizationCertificate": [
+		{
+		  "@id": "kzidv:ladanta/URL#8",
+		  "@type": "URL"
+		},
+		{
+		  "@id": "kzidv:ladanta/ImageObject#4",
+		  "@type": "ImageObject"
+		}
+	  ]
+    }
+  ]
+}

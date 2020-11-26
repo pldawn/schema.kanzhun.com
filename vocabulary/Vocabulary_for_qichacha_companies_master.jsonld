@@ -1,0 +1,115 @@
+{
+	"@context": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"@vocab": {
+		"add_time": {
+			"@align": ""
+		},
+		"assetsNum": {
+			"@align": ""
+		},
+		"city": {
+			"@align": "kzs:foundingCity",
+			"@domain": "kzs:Company"
+		},
+		"data_update_time": {
+			"@align": ""
+		},
+		"email": {
+			"@align": "kzs:hasEmailAccount",
+			"@domain": "kzs:Company"
+		},
+		"establish_date": {
+			"@align": "schema:foundingDate",
+			"@domain": "kzs:Company"
+		},
+		"establish_date8": {
+			"@align": ""
+		},
+		"examined_date": {
+			"@align": "kzs:checkDate",
+			"@domain": "kzs:Company"
+		},
+		"examined_date8": {
+			"@align": ""
+		},
+		"field": {
+			"@align": "kzs:organizationIndustry",
+			"@domain": "kzs:Company"
+		},
+		"fullname": {
+			"@align": "schema:legalName",
+			"@domain": "kzs:Company"
+		},
+		"historyNum": {
+			"@align": ""
+		},
+		"id": {
+			"@align": ""
+		},
+		"investmentNum": {
+			"@align": ""
+		},
+		"keyNo": {
+			"@align": ""
+		},
+		"lawsuitNum": {
+			"@align": ""
+		},
+		"legalRepresentative": {
+			"@align": "kzs:legalPerson",
+			"@domain": "kzs:Company"
+		},
+		"logo_url": {
+			"@align": "kzs:companyImage",
+			"@domain": "kzs:Company"
+		},
+		"managementStatus": {
+			"@align": "kzs:businessStatus",
+			"@domain": "kzs:Company"
+		},
+		"originalname": {
+			"@align": "kzs:usedName",
+			"@domain": "kzs:Company"
+		},
+		"registeredCapital": {
+			"@align": "kzs:registeredCapital",
+			"@domain": "kzs:Company"
+		},
+		"reportNum": {
+			"@align": ""
+		},
+		"runNum": {
+			"@align": ""
+		},
+		"shortname": {
+			"@align": "kzs:shortname",
+			"@domain": "kzs:Company"
+		},
+		"tele": {
+			"@align": "kzs:hasPhoneNumber",
+			"@domain": "kzs:Company"
+		},
+		"trademark": {
+			"@align": "kzs:trademark",
+			"@domain": "kzs:Company"
+		},
+		"type": {
+			"@align": "kzs:organizationForm",
+			"@domain": "kzs:Company"
+		},
+		"update_time": {
+			"@align": ""
+		},
+		"url": {
+			"@align": ""
+		},
+		"web": {
+			"@align": "schema:url",
+			"@domain": "kzs:Company"
+		},
+		"insuredCount": {
+			"@align": "kzs:insuredCount",
+			"@domain": "kzs:Company"
+		}
+	}
+}

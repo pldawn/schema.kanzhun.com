@@ -1,0 +1,91 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"https://schema.kanzhun.com/contexts/20190112/AddressLevelType.jsonld",
+    {
+      "Organization": "schema:Organization",
+      "EducationalOrganization": "schema:EducationalOrganization",
+      "JobPosting": "schema:JobPosting",
+      "AdministrativeArea": "schema:AdministrativeArea",
+	  "AddressLevelType": "kzs:AddressLevelType",
+      "address": {
+        "@id": "schema:address",
+		"@domain": "AdministrativeArea",
+        "@type": "Text"
+      },
+      "addressLevel": {
+        "@id": "kzs:addressLevel",
+		"@domain": "AdministrativeArea",
+        "@range": "AddressLevelType",
+		"@enumeration": ["Country", "Province", "City", "District", "Township", "Village", "Street", "Landmark", "Area", "Tower", "Storey", "Unit", "Floor", "Tablet"]
+      },
+      "streetNumber": {
+        "@id": "kzs:streetNumber",
+		"@domain": "AdministrativeArea",
+        "@type": "Text"
+      },
+      "containsPlace": {
+        "@id": "schema:containsPlace",
+		"@domain": "AdministrativeArea",
+        "@range": "AdministrativeArea"
+      },
+      "jobLocationFor": {
+        "@reverse": "schema:jobLocation",
+		"@domain": "AdministrativeArea",
+        "@range": "JobPosting"
+      },
+      "locationFor": {
+        "@reverse": "schema:location",
+		"@domain": "AdministrativeArea",
+        "@range": ["Organization", "EducationalOrganization"]
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/AdministrativeArea.jsonld",
+      "@comment": "establish the structure of AdministrativeArea.",
+      "@id": "kzidv:AdministrativeArea#1",
+      "@type": "AdministrativeArea",
+      "address": "冠捷大厦",
+      "addressLevel": "Landmark",
+      "streetNumber": "8号",
+      "containsPlace": [
+        {
+          "@id": "kzidv:AdministrativeArea#2",
+          "@type": "AdministrativeArea"
+        },
+        {
+          "@id": "kzidv:AdministrativeArea#3",
+          "@type": "AdministrativeArea"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/AdministrativeArea.jsonld",
+      "@comment": "relate a AdministrativeArea to JobPosting or Organization.",
+      "@id": "kzidv:AdministrativeArea#1",
+      "@type": "AdministrativeArea",
+      "jobLocationFor": [
+        {
+          "@id": "kzidv:JobPosting#1",
+          "@type": "JobPosting"
+        },
+        {
+          "@id": "kzidv:JobPosting#2",
+          "@type": "JobPosting"
+        }
+      ],
+      "locationFor": [
+        {
+          "@id": "kzidv:Organization#1",
+          "@type": "Organization"
+        },
+        {
+          "@id": "kzidv:EducationalOrganization#1",
+          "@type": "EducationalOrganization"
+        }
+      ]
+    }
+  ]
+}

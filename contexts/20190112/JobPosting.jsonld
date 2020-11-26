@@ -1,0 +1,130 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"https://schema.kanzhun.com/contexts/20190112/EducationRequirementsType.jsonld",
+	"https://schema.kanzhun.com/contexts/20190112/ExperienceRequirementsType.jsonld",
+    {
+      "User": "kzs:User",
+      "Organization": "schema:Organization",
+      "JobPosting": "schema:JobPosting",
+      "AdministrativeArea": "schema:AdministrativeArea",
+	  "EducationRequirementsType": "kzs:EducationRequirementsType",
+	  "ExperienceRequirementsType": "kzs:ExperienceRequirementsType",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": ["User", "Organization", "JobPosting"],
+        "@type": "Integer"
+      },
+      "title": {
+        "@id": "schema:title",
+		"@domain": "JobPosting",
+        "@type": "Text"
+      },
+      "occupationalCategory": {
+        "@id": "schema:occupationalCategory",
+		"@domain": "JobPosting",
+        "@type": "Text"
+      },
+      "baseSalary": {
+        "@id": "schema:baseSalary",
+		"@domain": "JobPosting",
+        "@type": "Float"
+      },
+      "capSalary": {
+        "@id": "kzs:capSalary",
+		"@domain": "JobPosting",
+        "@type": "Float"
+      },
+      "dateTimePosted": {
+        "@id": "kzs:dateTimePosted",
+		"@domain": "JobPosting",
+        "@type": "DateTime"
+      },
+      "validThrough": {
+        "@id": "schema:validThrough",
+		"@domain": "JobPosting",
+        "@type": "DateTime"
+      },
+      "jobLocation": {
+        "@id": "schema:jobLocation",
+		"@domain": "JobPosting",
+        "@range": "AdministrativeArea"
+      },
+      "hiringPerson": {
+        "@id": "kzs:hiringPerson",
+		"@domain": "JobPosting",
+        "@range": "User"
+      },
+      "hiringOrganization": {
+        "@id": "schema:hiringOrganization",
+		"@domain": "JobPosting",
+        "@range": "Organization"
+      },
+	  "standardEducationRequirements": {
+		"@id": "kzs:standardEducationRequirements",
+		"@domain": "JobPosting",
+        "@range": "EducationRequirementsType",
+		"@enumeration": ["UnlimitedDegree", "PrimarySchoolAbove", "PrimarySchoolBelow", "MiddleSchoolAbove", "MiddleSchoolBelow", "SecondaryCollegeAbove", "SecondaryCollegeBelow", "HighSchoolAbove", "HighSchoolBelow", "CollegeAbove", "CollegeBelow", "BachelorAbove", "BachelorBelow", "MasterAbove", "MasterBelow", "DoctorAbove", "DoctorBelow", "PostdoctoralAbove", "PostdoctoralBelow"]
+	  },
+	  "standardExperienceRequirements": {
+		"@id": "kzs:standardExperienceRequirements",
+		"@domain": "JobPosting",
+        "@range": "ExperienceRequirementsType",
+		"@enumeration": ["UnlimitedExperience", "Graduate", "OneYearMore", "OneYearLess", "OneToThreeYear", "ThreeYearMore", "ThreeYearLess", "ThreeToFiveYear", "FiveYearMore", "FiveYearLess", "FiveToTenYear", "TenYearMore", "TenYearLess"]
+	  }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/JobPosting.jsonld",
+      "@comment": "create a JobPosting.",
+      "@id": "kzidv:JobPosting#1",
+      "@type": "JobPosting",
+      "xid": "22863402",
+      "title": "chatbot/人机对话/智能客服算法研究员",
+      "occupationalCategory": "100117",
+      "baseSalary": "30",
+      "capSalary": "60",
+      "standardEducationRequirements": "MasterAbove",
+      "standardExperienceRequirements": "ThreeYearMore",
+      "dateTimePosted": "2018-01-11T18:51:31",
+      "jobLocation": [
+        {
+          "@id": "kzidv:AdministrativeArea#1",
+          "@type": "AdministrativeArea"
+        },
+        {
+          "@id": "kzidv:AdministrativeArea#2",
+          "@type": "AdministrativeArea"
+        }
+      ],
+      "hiringPerson": [
+        {
+          "@id": "kzidv:User#1",
+          "@type": "User"
+        },
+        {
+          "@id": "kzidv:User#2",
+          "@type": "User"
+        }
+      ],
+      "hiringOrganization": [
+        {
+          "@id": "kzidv:Organization#1",
+          "@type": "Organization"
+        },
+        {
+          "@id": "kzidv:Organization#2",
+          "@type": "Organization"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/JobPosting.jsonld",
+      "@comment": "close a expired JobPosting.",
+      "@id": "kzidv:JobPosting#1",
+      "@type": "JobPosting",
+      "validThrough": "2018-12-06T01:43:23"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "Country": "https://schema.kanzhun.com/schema/Country",
+	"Province": "https://schema.kanzhun.com/schema/Province",
+	"City": "https://schema.kanzhun.com/schema/City",
+	"District": "https://schema.kanzhun.com/schema/District",
+	"Township": "https://schema.kanzhun.com/schema/Township",
+	"Village": "https://schema.kanzhun.com/schema/Village",
+	"Street": "https://schema.kanzhun.com/schema/Street",
+	"Landmark": "https://schema.kanzhun.com/schema/Landmark",
+	"Area": "https://schema.kanzhun.com/schema/Area",
+	"Tower": "https://schema.kanzhun.com/schema/Tower",
+	"Storey": "https://schema.kanzhun.com/schema/Storey",
+	"Unit": "https://schema.kanzhun.com/schema/Unit",
+	"Floor": "https://schema.kanzhun.com/schema/Floor",
+	"Tablet": "https://schema.kanzhun.com/schema/Tablet"
+  }
+}

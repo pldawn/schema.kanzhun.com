@@ -1,0 +1,299 @@
+{
+	"@context": "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"@vocab": {
+		"Partners": {
+			"@align": "kzs:stockholder",
+			"@domain": "kzs:Company"，
+			"@attribute": [
+				"KeyNo": {
+					"@align": "",
+					"@id": ["kzs:Company", "schema:Person"]
+				},
+				"StockName": [
+					{
+						"@align": "schema:legalName",
+						"@domain": "kzs:Company"
+					},
+					{
+						"@align": "schema:name",
+						"@domain": "schema:Person"
+					}
+				],
+				"StockType": {
+					"@align": ""
+				},
+				"StockPercent": {
+					"@align": "kzs:stockPercent",
+					"@domain": "schema:OrganizationRole"
+				},
+				"ShouldCapi": {
+					"@align": ""
+				},
+				"ShoudDate": {
+					"@align": ""
+				},
+				"InvestType": {
+					"@align": ""
+				},
+				"InvestName": {
+					"@align": ""
+				},
+				"RealCapi": {
+					"@align": ""
+				},
+				"CapiDate": {
+					"@align": ""
+				}
+			]
+		},
+		"Employees": {
+			"@align": "schema:employee",
+			"@domain": "kzs:Company",
+			"@attribute": [
+				"Name": {
+					"@align": "schema:name",
+					"@domain": "schema:Person"
+				},
+				"Job": {
+					"@align": ""
+				}
+			]
+		},
+		"Branches": [
+			{
+				"@align": "schema:branch",
+				"@domain": "kzs:Company"
+			},
+			{
+				"@align": "kzs:stockholder",
+				"@reverse": "True",
+				"@domain": "kzs:Company",
+				"@attribute": [
+					"CompanyId": {
+						"@align": "",
+						"@id": "kzs:Company"
+					},
+					"RegNo": {
+						"@align": "kzs:registerCode",
+						"@domain": "kzs:Company"
+					},
+					"Name": {
+						"@align": "schema:legalName",
+						"@domain": "kzs:Company"
+					},
+					"BelongOrg": {
+						"@align": "kzs:registerAuthority",
+						"@domain": "kzs:Company"
+					},
+					"CreditCode": {
+						"@align": "kzs:creditCode",
+						"@domain": "kzs:Company"
+					},
+					"OperName": {
+						"@align": "kzs:legalPerson",
+						"@domain": "kzs:Company"
+					}
+				]
+			}
+		],
+		"ChangeRecords": {
+			"@align": ""
+		},
+		"ContactInfo": {
+			"@align": "",
+			"@attribute": [
+				"WebSite": {
+					"@align": "schema:url",
+					"@domain": "kzs:Company",
+					"@attribute": [
+						"Name": {
+							"@align": "schema:name",
+							"domain": "schema:URL"
+						},
+						"Url": {
+							"@align": "schema:identifier",
+							"domain": "schema:URL"
+						}
+					]
+				},
+				"PhoneNumber": {
+					"@align": "kzs:hasPhoneNumber",
+					"@domain": "kzs:Company"
+				},
+				"Email": {
+					"@align": "kzs:hasEmailAccount",
+					"@domain": "kzs:Company"
+				}
+			]
+		},
+		"Industry": {
+			"@align": "",
+			"@attribute": [
+				"IndustryCode": {
+					"@align": ""
+				},
+				"Industry": {
+					"@align": "kzs:organizationIndustry",
+					"@domain": "kzs:Company"
+				},
+				"SubIndustryCode": {
+					"@align": ""
+				},
+				"SubIndustry": {
+					"@align": ""
+				},
+				"MiddleCategoryCode": {
+					"@align": ""
+				},
+				"MiddleCategory": {
+					"@align": ""
+				},
+				"SmallCategoryCode": {
+					"@align": ""
+				},
+				"SmallCategory": {
+					"@align": ""
+				}
+			]
+		},
+		"Area": {
+			"@align": "",
+			"@attribute": [
+				"Province": {
+					"@align": ""
+				},
+				"City": {
+					"@align": "kzs:foundingCity",
+					"@domain": "kzs:Company"
+				},
+				"County": {
+					"@align": ""
+				}
+			]
+		},
+		"InsuredCount": {
+			"@align": "kzs:insuredCount",
+			"@domain": "kzs:Company"
+		},
+		"EnglishName": {
+			"@align": "kzs:foreignName",
+			"@domain": "kzs:Company"
+		},
+		"PersonScope": {
+			"@align": "schema:numberOfEmployees",
+			"@domain": "kzs:Company"
+		},
+		"TagList": {
+			"@align": ""
+		},
+		"ARContactList": {
+			"@align": ""
+		},
+		"KeyNo": {
+			"@align": ""
+		},
+		"Name": {
+			"@align": "schema:legalName",
+			"@domain": "kzs:Company"
+		},
+		"No": {
+			"@align": "kzs:registerCode",
+			"@domain": "kzs:Company"
+		},
+		"BelongOrg": {
+			"@align": "kzs:registerAuthority",
+			"@domain": "kzs:Company"
+		},
+		"OperName": {
+			"@align": "kzs:legalPerson",
+			"@domain": "kzs:Company"
+		},
+		"StartDate": {
+			"@align": "schema:foundingDate",
+			"@domain": "kzs:Company"
+		},
+		"EndDate": {
+			"@align": "schema:dissolutionDate",
+			"@domain": "kzs:Company"
+		},
+		"Status": {
+			"@align": "kzs:businessStatus",
+			"@domain": "kzs:Company"
+		},
+		"Province": {
+			"@align": ""
+		},
+		"UpdatedDate": {
+			"@align": ""
+		},
+		"CreditCode": {
+			"@align": "kzs:creditCode",
+			"@domain": "kzs:Company"
+		},
+		"RegistCapi": {
+			"@align": "kzs:registeredCapital",
+			"@domain": "kzs:Company"
+		},
+		"EconKind": {
+			"@align": "kzs:organizationForm",
+			"@domain": "kzs:Company"
+		},
+		"Address": {
+			"@align": "schema:foundingLocation",
+			"@domain": "kzs:Company"
+		},
+		"Scope": {
+			"@align": "kzs:businessScope",
+			"@domain": "kzs:Company"
+		},
+		"TermStart": {
+			"@align": "schema:foundingDate",
+			"@domain": "kzs:Company"
+		},
+		"TeamEnd": {
+			"@align": "schema:dissolutionDate",
+			"@domain": "kzs:Company"
+		},
+		"CheckDate": {
+			"@align": "kzs:checkDate",
+			"@domain": "kzs:Company"
+		},
+		"OrgNo": {
+			"@align": "kzs:organizationCode",
+			"@domain": "kzs:Company"
+		},
+		"IsOnStock": {
+			"@align": ""
+		},
+		"StockNumber": {
+			"@align": "kzs:stockCode",
+			"@domain": "kzs:Company"
+		},
+		"StockType": {
+			"@align": ""
+		},
+		"OriginalName": {
+			"@align": "",
+			"attribute": [
+				"Name": {
+					"@align": "kzs:usedName",
+					"@domain": "kzs:Company"
+				},
+				"ChangeDate": {
+					"@align": ""
+				}
+			]
+		},
+		"ImageUrl": {
+			"@align": "kzs:companyImage",
+			"@domain": "kzs:Company"
+		},
+		"EntType": {
+			"@align": ""
+		},
+		"RecCap": {
+			"@align": "kzs:paidCapital",
+			"@domain": "kzs:Company"
+		}
+	}
+}

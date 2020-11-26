@@ -1,0 +1,105 @@
+{
+  "@context": [
+    "https://schema.kanzhun.com/contexts/20190112/base.jsonld",
+	"https://schema.kanzhun.com/contexts/20190112/DegreeType.jsonld",
+    {
+      "User": "kzs:User",
+      "EducationalOrganization": "schema:EducationalOrganization",
+      "OrganizationRole": "schema:OrganizationRole",
+	  "DegreeType": "kzs:DegreeType",
+      "xid": {
+        "@id": "kzs:xid",
+		"@domain": ["User", "EducationalOrganization"],
+        "@type": "Integer"
+      },
+      "legalName": {
+        "@id": "schema:legalName",
+		"@domain": "EducationalOrganization",
+        "@type": "Text"
+      },
+      "domesticRating": {
+        "@id": "kzs:domesticRating",
+		"@domain": "EducationalOrganization",
+        "@type": "Integer"
+      },
+      "startDate": {
+        "@id": "schema:startDate",
+		"@domain": "OrganizationRole",
+        "@type": "Date"
+      },
+      "endDate": {
+        "@id": "schema:endDate",
+		"@domain": "OrganizationRole",
+        "@type": "Date"
+      },
+      "degree": {
+        "@id": "kzs:degree",
+		"@domain": "OrganizationRole",
+        "@range": "DegreeType",
+		"@enumeration": ["PrimarySchoolDiploma", "MiddleSchoolDiploma", "SecondaryCollegeDiploma", "HighSchoolDiploma", "CollegeDiploma", "BachelorDiploma", "MasterDiploma", "DoctorDiploma", "PostdoctoralDiploma"]
+      },
+      "major": {
+        "@id": "kzs:major",
+		"@domain": "OrganizationRole",
+        "@type": "Text"
+      },
+      "alumni": {
+        "@reverse": "schema:alumniOf",
+		"@domain": ["EducationalOrganization", "OrganizationRole"],
+        "@range": ["User", "OrganizationRole"]
+      }
+    }
+  ],
+  "@example": [
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/EducationalOrganization.jsonld",
+      "@comment": "create a school.",
+      "@id": "kzidv:EducationalOrganization#1",
+      "@type": "EducationalOrganization",
+      "xid": "10002",
+      "legalName": "中国人民大学",
+      "domesticRating": "6",
+      "alumni": [
+        {
+          "@type": "OrganizationRole",
+          "alumni": {
+            "@id": "kzidv:User#1",
+            "@type": "User"
+          },
+          "degree": "MasterDiploma",
+          "major": "金融学",
+          "startDate": "2013-09-01",
+          "endDate": "2016-06-20"
+        },
+        {
+          "@type": "OrganizationRole",
+          "alumni": {
+            "@id": "kzidv:User#2",
+            "@type": "User"
+          },
+          "degree": "BachelorDiploma",
+          "major": "统计学",
+          "startDate": "2007-09-01",
+          "endDate": "2011-06-20"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.kanzhun.com/contexts/20190112/EducationalOrganization.jsonld",
+      "@comment": "update a school to a user.",
+      "@id": "kzidv:EducationalOrganization#1",
+      "@type": "EducationalOrganization",
+      "alumni": {
+        "@type": "OrganizationRole",
+        "alumni": {
+          "@id": "kzidv:User#1",
+          "@type": "User"
+        },
+        "degree": "MasterDiploma",
+        "major": "金融学",
+        "startDate": "2013-09-01",
+        "endDate": "2016-06-20"
+      }
+    }
+  ]
+}

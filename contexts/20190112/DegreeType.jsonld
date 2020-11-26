@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "PrimarySchoolDiploma": "https://schema.kanzhun.com/schema/PrimarySchoolDiploma",
+	"MiddleSchoolDiploma": "https://schema.kanzhun.com/schema/MiddleSchoolDiploma",
+	"SecondaryCollegeDiploma": "https://schema.kanzhun.com/schema/SecondaryCollegeDiploma",
+	"HighSchoolDiploma": "https://schema.kanzhun.com/schema/HighSchoolDiploma",
+	"CollegeDiploma": "https://schema.kanzhun.com/schema/CollegeDiploma",
+	"BachelorDiploma": "https://schema.kanzhun.com/schema/BachelorDiploma",
+	"MasterDiploma": "https://schema.kanzhun.com/schema/MasterDiploma",
+	"DoctorDiploma": "https://schema.kanzhun.com/schema/DoctorDiploma",
+	"PostdoctoralDiploma": "https://schema.kanzhun.com/schema/PostdoctoralDiploma"
+  }
+}
